@@ -1,15 +1,10 @@
 ---
 name: citation-sourcing
-version: 1.1.0
 description: |
   Source tier definitions, citation formatting, verification patterns, and
   hallucination prevention. Load when writing content that requires external
   evidence, statistics, or expert claims. Covers what sources to use, how to
   cite them, and what to avoid.
-tags:
-  - citations
-  - sources
-  - integrity
 ---
 
 # Citation Sourcing

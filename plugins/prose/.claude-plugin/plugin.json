@@ -3,8 +3,7 @@
   "version": "0.1.0",
   "description": "Composable content quality toolkit: styleguide-calibrated writing, domain-specific formats, structural editing, citation integrity, and editorial workflows",
   "author": {
-    "name": "Portage Contributors",
-    "url": "https://github.com/birdseye"
+    "name": "Christopher Rock"
   },
   "license": "GPL-3.0",
   "keywords": [

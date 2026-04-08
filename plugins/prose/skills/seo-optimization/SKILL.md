@@ -1,6 +1,5 @@
 ---
 name: seo-optimization
-version: 1.0.0
 description: |
   SEO content optimization based on the Periodic Table of SEO Elements.
   Use when writing or reviewing content for search performance. Covers

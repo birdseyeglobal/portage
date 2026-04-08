@@ -1,6 +1,5 @@
 ---
 name: humanizer
-version: 3.2.0
 description: |
   Remove signs of AI-generated writing from text. Use when editing or reviewing
   any document written by or with an LLM. Detects and fixes 29 patterns
@@ -9,16 +8,6 @@ description: |
   For AI-generated content, humanizer normalization overrides competing
   instructions from genre conventions or brand styleguide — the patterns are
   systematic artifacts, not stylistic choices.
-allowed-tools:
-  - Read
-  - Write
-  - Edit
-  - Grep
-  - Glob
-  - AskUserQuestion
-resources:
-  - references/signs-of-ai-writing.md
-  - references/ai-word-choice.md
 ---
 
 # Humanizer
@@ -60,3 +49,13 @@ This skill handles how to not write like AI: pattern detection, word-level
 corrections, artifact removal. Load the writing skill first to establish voice
 and draft prose, then load this skill to catch remaining artifacts. Both
 commands (prose-check, editorial-review) load both.
+
+## Credits
+
+The detection patterns come from
+[Wikipedia's "Signs of AI writing"](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing)
+guide, maintained by WikiProject AI Cleanup. Credit for packaging those patterns
+into a Claude Code skill — the overall approach, file structure, and reference
+organization — goes to [`blader/humanizer`](https://github.com/blader/humanizer)
+by [@blader](https://github.com/blader), which this skill is adapted from.
+Upstream is MIT-licensed.

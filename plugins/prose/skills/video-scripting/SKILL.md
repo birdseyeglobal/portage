@@ -1,18 +1,10 @@
 ---
 name: video-scripting
-version: 1.0.0
 description: |
   This skill should be used when the content brief specifies a video script,
   video narration, or TTS-ready script. Covers writing pure narration for
   text-to-speech delivery, including pacing, hook structure, verbal transitions,
   and the strict no-visual-cues constraint.
-tags:
-  - video
-  - narration
-  - script
-  - tts
-resources:
-  - references/formatting-rules.md
 ---
 
 # Video Scripting

@@ -1,7 +1,6 @@
 ---
-name: Transcript cleanup
+name: transcript-cleanup
 description: This skill should be used when the user asks to "clean up a transcript", "fix speech artifacts", "edit interview quotes", "polish transcription", "clean up quotes from a recording", or when working with speech-to-text output that needs light editing while preserving the speaker's voice.
-version: 1.0.0
 ---
 
 # Transcript cleanup

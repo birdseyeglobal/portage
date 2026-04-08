@@ -1,22 +1,11 @@
 ---
 name: social-media
-version: 1.0.0
 description: |
   This skill should be used when writing social media posts with platform-specific
   formatting, character limits, and tone. Applies when the content brief specifies
   a social post, tweet, LinkedIn post, Instagram caption, Facebook post, Threads
   post, or Reddit submission. Covers per-platform rules, character budgets, and
   common pitfalls.
-tags:
-  - social
-  - linkedin
-  - twitter
-  - instagram
-  - facebook
-  - threads
-  - reddit
-resources:
-  - references/platforms.md
 ---
 
 # Social Media

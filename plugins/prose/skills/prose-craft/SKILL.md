@@ -7,19 +7,6 @@ description: |
   provides word choice corrections and construction techniques that address
   persistent LLM weaknesses. If the output needs to sound like it was written
   by someone specific for someone specific, load this skill.
-tags:
-  - writing
-  - style
-  - prose
-  - craft
-  - voice
-  - tone
-resources:
-  - references/elements-of-style.md
-  - references/dreyers-english.md
-  - references/lessons-in-clarity-and-grace.md
-  - references/on-writing-well.md
-  - references/microstyle.md
 ---
 
 # Prose Craft
@@ -279,3 +266,12 @@ citations — how claims are phrased, how evidence is woven into arguments.
 **SEO optimization** handles search-specific structural concerns (answer-first
 formatting, FAQ sections, AI citability patterns). This skill handles prose
 quality within whatever structure the content requires.
+
+## Credits
+
+The `references/elements-of-style.md` file is taken directly from
+[`obra/elements-of-style`](https://github.com/obra/elements-of-style) by
+[Jesse Vincent](https://github.com/obra), a Claude Code skill in the
+superpowers marketplace. The underlying Strunk text is public domain;
+the formatted reference file is the work of that project. Full credit
+to the author.
