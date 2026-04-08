@@ -1,0 +1,37 @@
+{
+  "name": "prose",
+  "version": "0.1.0",
+  "description": "Composable content quality toolkit: styleguide-calibrated writing, domain-specific formats, structural editing, citation integrity, and editorial workflows",
+  "author": {
+    "name": "Portage Contributors",
+    "url": "https://github.com/birdseye"
+  },
+  "license": "GPL-3.0",
+  "keywords": [
+    "writing",
+    "content",
+    "style",
+    "editing",
+    "prose",
+    "seo",
+    "video",
+    "social-media",
+    "citations"
+  ],
+  "skills": [
+    "./skills/prose-craft",
+    "./skills/video-scripting",
+    "./skills/social-media",
+    "./skills/citation-sourcing",
+    "./skills/seo-optimization",
+    "./skills/humanizer",
+    "./skills/transcript-cleanup"
+  ],
+  "agents": [
+    "./agents/copy-desk.md"
+  ],
+  "commands": [
+    "./commands/prose-check.md",
+    "./commands/editorial-review.md"
+  ]
+}

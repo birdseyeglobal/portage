@@ -1,0 +1,17 @@
+{
+  "name": "portage",
+  "owner": {
+    "name": "Portage Contributors",
+    "url": "https://github.com/birdseye"
+  },
+  "metadata": {
+    "description": "Open-source Claude Code plugins with cross-tool skill compatibility",
+    "version": "0.1.0"
+  },
+  "plugins": [
+    {
+      "name": "prose",
+      "source": "./plugins/prose"
+    }
+  ]
+}
