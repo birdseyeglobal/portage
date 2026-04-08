@@ -1,11 +1,11 @@
 {
   "name": "portage",
   "owner": {
-    "name": "Portage Contributors",
-    "url": "https://github.com/birdseye"
+    "name": "Christopher Rock",
+    "url": "https://github.com/grootenberg"
   },
   "metadata": {
-    "description": "Open-source Claude Code plugins with cross-tool skill compatibility",
+    "description": "A marketplace for portable AI-assistant extensions. Skills work in any Open Skills Standard tool; Claude Code users also get plugins that bundle skills, commands, and agents.",
     "version": "0.1.0"
   },
   "plugins": [

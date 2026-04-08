@@ -1,8 +1,8 @@
 # Portage
 
-Open-source Claude Code plugins with cross-tool skill compatibility.
+A marketplace for portable AI-assistant extensions.
 
-Portage distributes Claude Code plugins through a marketplace and exposes the same skills under `.agents/skills/` so tools that follow the Open Skills Standard — Cursor, Codex, OpenCode, and others — can use them without a separate install.
+Portage packages skills, commands, and agents as Claude Code plugins *and* exposes the skills under `.agents/skills/` so tools that follow the Open Skills Standard — Cursor, Codex, OpenCode, and others — can use them without a separate install. Skills are the portable unit: they work anywhere the standard is supported. The plugin format is the richer unit: Claude Code users get skills bundled with commands and agents.
 
 ## What's inside
 
@@ -16,7 +16,7 @@ Portage distributes Claude Code plugins through a marketplace and exposes the sa
 Add the marketplace, then install the plugin:
 
 ```
-/plugin marketplace add birdseye/portage
+/plugin marketplace add grootenberg/Portage
 /plugin install prose@portage
 ```
 
