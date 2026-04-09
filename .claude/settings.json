@@ -1,0 +1,129 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(/Users/chris/Documents/code/birdseye-cc-flightdeck/claude-marketplace/ralph-wiggum/scripts/setup-ralph-loop.sh:*)",
+      "Bash(claude-marketplace/ralph-wiggum/scripts/setup-ralph-loop.sh:*)",
+      "Bash(claude-marketplace/ralph-wiggum/scripts/close-ralph-loop.sh:*)",
+      "Bash(rm .claude/ralph-loop.local.md)",
+      "Bash(if [[ -f .claude/ralph-loop.local.md ]]:*)",
+      "mcp__figma-desktop__get_metadata",
+      "mcp__figma-desktop__get_variable_defs",
+      "mcp__figma-desktop__get_design_context",
+      "mcp__figma-desktop__get_screenshot",
+      "Bash(npm run build:*)",
+      "Bash(npx tailwindcss:*)",
+      "Bash(npm run lint)",
+      "Bash(npm run typecheck)",
+      "Bash(npm run test)",
+      "Bash(npm run test:*)",
+      "Bash(rg:*)",
+      "Bash(fd:*)",
+      "Bash(xargs:*)",
+      "Bash(poetry install:*)",
+      "Bash(poetry run pytest:*)",
+      "Bash(poetry run alembic history:*)",
+      "mcp__linear-server__list_teams",
+      "mcp__linear-server__get_team",
+      "mcp__linear-server__get_user",
+      "mcp__linear-server__get_issue",
+      "mcp__linear-server__get_issue_comments",
+      "mcp__context7__resolve-library-id",
+      "Skill(skill-creator)",
+      "Skill(k8s-job-deployment)",
+      "Read(**/*.json)",
+      "Read(**/*.yaml)",
+      "Read(**/*.yml)",
+      "Read(**/*.toml)",
+      "Write(**/*.json)",
+      "Write(**/*.yaml)",
+      "Write(**/*.yml)",
+      "Write(**/*.toml)"
+    ],
+    "deny": [
+      "Read(**/*.env)",
+      "Read(**/*.pem)",
+      "Read(**/*.key)",
+      "Read(**/*.tfstate)",
+      "Read(**/*.tfstate.backup)",
+      "Read(secrets/)",
+      "Write(**/*.env)",
+      "Write(**/*.pem)",
+      "Write(**/*.key)",
+      "Write(**/*.tfstate)",
+      "Write(**/*.tfstate.backup)",
+      "Write(secrets/)",
+      "Bash(gh issue:*)"
+    ],
+    "ask": [
+      "Bash(git push:*)",
+      "Bash(git merge:*)",
+      "Bash(git rm:*)",
+      "Bash(chmod:*)",
+      "Bash(npm install:*)",
+      "mcp__linear-server__create_issue",
+      "Bash(psql:*)",
+      "Bash(gh pr create:*)",
+      "Bash(gh pr merge:*)",
+      "Bash(gh pr close:*)",
+      "Bash(gh pr reopen:*)",
+      "Bash(gh pr edit:*)",
+      "Bash(gh pr ready:*)",
+      "Bash(gh pr review:*)",
+      "Bash(gh pr lock:*)",
+      "Bash(gh pr unlock:*)",
+      "Bash(gh pr revert:*)",
+      "Bash(gh pr update-branch:*)"
+    ]
+  },
+  "enabledMcpjsonServers": [
+    "context7"
+  ],
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "startup",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "\"$CLAUDE_PROJECT_DIR\"/dev_tools/maintenance/setup-claude-symlinks.sh"
+          },
+          {
+            "type": "command",
+            "command": "\"$CLAUDE_PROJECT_DIR\"/.claude/hooks/dbmcp-autostart.sh",
+            "timeout": 45
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "Read|Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "\"$CLAUDE_PROJECT_DIR\"/.claude/hooks/security_protection_hook.py"
+          }
+        ]
+      },
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "\"$CLAUDE_PROJECT_DIR\"/.claude/hooks/edit_protection_hook.py"
+          }
+        ]
+      },
+      {
+        "matcher": "mcp__postgresdev|mcp__postgresprod|mcp__postgresstaging",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "\"$CLAUDE_PROJECT_DIR\"/.claude/hooks/dbmcp-autostart.sh",
+            "timeout": 30
+          }
+        ]
+      }
+    ]
+  }
+}
