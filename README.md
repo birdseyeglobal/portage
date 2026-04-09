@@ -1,5 +1,7 @@
 # Portage
 
+[![CI](https://github.com/grootenberg/Portage/actions/workflows/ci.yml/badge.svg)](https://github.com/grootenberg/Portage/actions/workflows/ci.yml)
+
 A marketplace for portable AI-assistant extensions.
 
 Portage packages skills, commands, and agents as Claude Code plugins _and_ exposes the skills under `.agents/skills/` so tools that follow the Open Skills Standard — Cursor, Codex, OpenCode, and others — can use them without a separate install. Skills are the portable unit: they work anywhere the standard is supported. The plugin format is the richer unit: Claude Code users get skills bundled with commands and agents.
@@ -46,7 +48,7 @@ Re-run the script only when skills are added or removed. Edits inside an existin
 
 ## License
 
-GPL-3.0. See [LICENSE](LICENSE).
+MIT. See [LICENSE](LICENSE).
 
 ## Contributing
 

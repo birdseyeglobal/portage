@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "description": "A marketplace for portable AI-assistant extensions",
   "private": true,
-  "license": "GPL-3.0",
+  "license": "MIT",
   "scripts": {
     "format": "biome format --write && prettier --write \"**/*.md\"",
     "format:check": "biome format && prettier --check \"**/*.md\"",

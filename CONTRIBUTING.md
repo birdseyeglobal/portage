@@ -30,6 +30,6 @@ Run everything locally with `bun run validate` (format check + lint + skill fron
 - **Follow the existing plugin structure** under `plugins/`. Each plugin has its own `.claude-plugin/plugin.json`, plus `agents/`, `commands/`, and `skills/` directories as needed.
 - **Keep skills self-contained.** A skill is a directory with a `SKILL.md` and any supporting files (`references/`, `scripts/`, `assets/`). The directory is what gets symlinked into `.claude/skills/` and surfaced to other tools.
 - **Keep content generic.** Skills and plugins should apply to any project using the relevant tech. Avoid company or product names.
-- **License.** By contributing, you agree that your work will be distributed under GPL-3.0.
+- **License.** By contributing, you agree that your work will be distributed under MIT.
 
 Open a pull request when ready. Questions, concerns, or design discussions go in issues.
