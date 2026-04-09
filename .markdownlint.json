@@ -1,0 +1,19 @@
+{
+  "default": true,
+  "MD013": false,
+  "MD033": false,
+  "MD041": false,
+  "MD034": false,
+  "MD024": {
+    "siblings_only": true
+  },
+  "MD025": true,
+  "MD001": true,
+  "MD003": {
+    "style": "atx"
+  },
+  "MD040": true,
+  "MD046": {
+    "style": "fenced"
+  }
+}

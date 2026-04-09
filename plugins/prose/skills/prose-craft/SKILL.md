@@ -43,14 +43,14 @@ explain steps; it transfers a skill.
 
 Before choosing tone or register, identify the action this document performs:
 
-| Action | The document... | Voice consequence | Common archetypes |
-| --- | --- | --- | --- |
-| Inform | Delivers facts or analysis for the reader to absorb | Explanatory, concrete, evidence-forward | Explainer (concept → why it matters → how it works), data-driven (finding → data → implications) |
-| Persuade | Moves the reader to accept a position or take action | Thesis-driven, fair-minded, evidence over adjectives | Opinion/argument (position → evidence → counterargument → reaffirmation) |
-| Build consensus | Aligns a group around a decision or approach | Direct, anticipates objections, recommendation-first | Comparison (criteria → options → recommendation), design doc |
-| Transfer a skill | Enables the reader to do something new | Patient, sequential, second-person, anticipates errors | How-to guide (problem → steps → result), tutorial |
-| Certify or record | Creates a durable record for future reference | Precise, neutral, structured for retrieval | Postmortem, specification, changelog |
-| Narrate | Engages through story and human experience | Vivid, specific, scene-driven | Case study, profile, incident narrative |
+| Action            | The document...                                      | Voice consequence                                      | Common archetypes                                                                                |
+| ----------------- | ---------------------------------------------------- | ------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| Inform            | Delivers facts or analysis for the reader to absorb  | Explanatory, concrete, evidence-forward                | Explainer (concept → why it matters → how it works), data-driven (finding → data → implications) |
+| Persuade          | Moves the reader to accept a position or take action | Thesis-driven, fair-minded, evidence over adjectives   | Opinion/argument (position → evidence → counterargument → reaffirmation)                         |
+| Build consensus   | Aligns a group around a decision or approach         | Direct, anticipates objections, recommendation-first   | Comparison (criteria → options → recommendation), design doc                                     |
+| Transfer a skill  | Enables the reader to do something new               | Patient, sequential, second-person, anticipates errors | How-to guide (problem → steps → result), tutorial                                                |
+| Certify or record | Creates a durable record for future reference        | Precise, neutral, structured for retrieval             | Postmortem, specification, changelog                                                             |
+| Narrate           | Engages through story and human experience           | Vivid, specific, scene-driven                          | Case study, profile, incident narrative                                                          |
 
 ### Layer 2 — Who is the discourse community?
 
@@ -66,7 +66,7 @@ Reason through these characteristics:
   ideas? (Slack, journals, PRs, memos, blog posts, conference talks?) The
   channel's conventions set register expectations.
 - **Genres the community owns** — What document types does this community
-  produce? What are *their specific* conventions for this type? A "design doc"
+  produce? What are _their specific_ conventions for this type? A "design doc"
   at a startup looks different from a "design doc" at a government contractor.
 - **Specialized vocabulary** — What terms carry precise meaning inside the
   community? Which terms would be jargon to outsiders? Is the reader inside
@@ -82,14 +82,14 @@ to an expert reader — and what would immediately mark it as foreign?
 
 Assess along these axes:
 
-| Axis | Range |
-| --- | --- |
-| **Person** | First person ("I argue") ↔ Impersonal ("It was observed") |
-| **Evidence** | Data and citations ↔ Anecdotes and examples ↔ Logical argument |
-| **Hedging** | Strong claims ("This proves") ↔ Heavy qualification ("may suggest") |
-| **Structure** | Rigid template (IMRD, RFC) ↔ Flexible (essay, think piece) |
-| **Register** | Casual (contractions, fragments) ↔ Formal (no contractions, third person) |
-| **Jargon** | Assumed (expert audience) ↔ Defined on first use (mixed audience) |
+| Axis          | Range                                                                     |
+| ------------- | ------------------------------------------------------------------------- |
+| **Person**    | First person ("I argue") ↔ Impersonal ("It was observed")                 |
+| **Evidence**  | Data and citations ↔ Anecdotes and examples ↔ Logical argument            |
+| **Hedging**   | Strong claims ("This proves") ↔ Heavy qualification ("may suggest")       |
+| **Structure** | Rigid template (IMRD, RFC) ↔ Flexible (essay, think piece)                |
+| **Register**  | Casual (contractions, fragments) ↔ Formal (no contractions, third person) |
+| **Jargon**    | Assumed (expert audience) ↔ Defined on first use (mixed audience)         |
 
 When the session context lacks detailed conventions for the identified genre,
 load `references/on-writing-well.md` for per-genre guidance. Skip the reference
@@ -126,10 +126,10 @@ the session.
 
 ### Styleguides (pick one)
 
-| Reference | File | Best fit for |
-| --- | --- | --- |
-| **Elements of Style** | `references/elements-of-style.md` | Terse, economical prose. Internal documentation, READMEs, commit messages, technical references. When brevity is the priority. |
-| **Dreyer's English** | `references/dreyers-english.md` | Modern, opinionated prose. Blog posts, articles, proposals, any document that benefits from personality and contemporary usage. |
+| Reference                        | File                                         | Best fit for                                                                                                                                                 |
+| -------------------------------- | -------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Elements of Style**            | `references/elements-of-style.md`            | Terse, economical prose. Internal documentation, READMEs, commit messages, technical references. When brevity is the priority.                               |
+| **Dreyer's English**             | `references/dreyers-english.md`              | Modern, opinionated prose. Blog posts, articles, proposals, any document that benefits from personality and contemporary usage.                              |
 | **Lessons in Clarity and Grace** | `references/lessons-in-clarity-and-grace.md` | Complex or analytical prose. Design documents, research reports, strategic proposals. When the material is dense and clarity requires structural discipline. |
 
 ### Supplementary references
@@ -139,10 +139,10 @@ session context lacks the guidance they provide. If project instructions, brand
 voice, or CLAUDE.md already cover the same ground, the existing conventions
 take precedence — do not load the reference.
 
-| Reference | File | Load when | Skip when |
-| --- | --- | --- | --- |
+| Reference           | File                            | Load when                                                                                                                                                                              | Skip when                                                                                                                                         |
+| ------------------- | ------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **On Writing Well** | `references/on-writing-well.md` | The voice discovery process (above) identified a genre but the session context lacks detailed conventions for that genre — register, structure, evidence norms, audience expectations. | Project instructions or brand voice already define genre conventions for this document. Loading the reference would introduce a competing source. |
-| **Microstyle** | `references/microstyle.md` | Writing headlines, taglines, subject lines, button text, product names, or other short-form text where every word carries maximum weight. | The task is long-form prose. Short-form techniques do not apply. |
+| **Microstyle**      | `references/microstyle.md`      | Writing headlines, taglines, subject lines, button text, product names, or other short-form text where every word carries maximum weight.                                              | The task is long-form prose. Short-form techniques do not apply.                                                                                  |
 
 ## Styleguide Calibration
 

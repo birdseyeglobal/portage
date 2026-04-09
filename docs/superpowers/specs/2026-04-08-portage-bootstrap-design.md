@@ -17,7 +17,7 @@ Create Portage: an open-source repository that distributes Claude Code plugins a
 
 ## Repository Layout
 
-```
+```text
 portage/
 ├── .claude-plugin/
 │   └── marketplace.json
@@ -85,9 +85,7 @@ The seven skill directories (`prose-craft`, `citation-sourcing`, `humanizer`, `s
     "description": "Open-source Claude Code plugins with cross-tool skill compatibility",
     "version": "0.1.0"
   },
-  "plugins": [
-    { "name": "prose", "source": "./plugins/prose" }
-  ]
+  "plugins": [{ "name": "prose", "source": "./plugins/prose" }]
 }
 ```
 
@@ -101,7 +99,7 @@ Copy `agora/scripts/link-marketplace-skills.sh` verbatim. It:
 - Cleans stale symlinks when skills are removed.
 - Audits for duplicate `name:` fields in skill frontmatter across linked skills.
 
-Contributors run it once after cloning, and again when adding or removing skills. Edits to files *inside* an existing skill directory need no re-run — they propagate through the symlink.
+Contributors run it once after cloning, and again when adding or removing skills. Edits to files _inside_ an existing skill directory need no re-run — they propagate through the symlink.
 
 ### README
 

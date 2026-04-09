@@ -93,10 +93,11 @@ a list of criteria. Each criterion has:
 
 Return a structured report:
 
-```
+```markdown
 # Copy Desk Report
 
 ## Summary
+
 - Document: [name or path]
 - Rubrics evaluated: [count]
 - Total criteria: [count]
@@ -114,6 +115,7 @@ Return a structured report:
 [Repeat for each criterion...]
 
 ## Critical Failures (universal weight)
+
 [List any universal-weight criteria that scored Partial or Fail.
 These require immediate attention.]
 ```

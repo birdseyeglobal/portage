@@ -1,0 +1,46 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    name: Validate
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install Node dependencies
+        run: npm ci
+
+      - name: Install pre-commit
+        run: pip install pre-commit
+
+      - name: Run pre-commit on all files
+        run: pre-commit run --all-files --show-diff-on-failure
+
+      - name: Verify marketplace skill symlinks are up to date
+        run: |
+          ./scripts/link-marketplace-skills.sh
+          if [ -n "$(git status --porcelain .claude/skills .agents/skills)" ]; then
+            echo "ERROR: marketplace skill symlinks are out of date."
+            echo "Run ./scripts/link-marketplace-skills.sh locally and commit the result."
+            git status --porcelain .claude/skills .agents/skills
+            exit 1
+          fi

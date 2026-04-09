@@ -26,11 +26,6 @@
     "./skills/humanizer",
     "./skills/transcript-cleanup"
   ],
-  "agents": [
-    "./agents/copy-desk.md"
-  ],
-  "commands": [
-    "./commands/prose-check.md",
-    "./commands/editorial-review.md"
-  ]
+  "agents": ["./agents/copy-desk.md"],
+  "commands": ["./commands/prose-check.md", "./commands/editorial-review.md"]
 }

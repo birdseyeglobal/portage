@@ -1,0 +1,19 @@
+{
+  "name": "portage",
+  "version": "0.1.0",
+  "description": "A marketplace for portable AI-assistant extensions",
+  "private": true,
+  "license": "GPL-3.0",
+  "scripts": {
+    "format": "biome format --write && prettier --write \"**/*.md\"",
+    "format:check": "biome format && prettier --check \"**/*.md\"",
+    "lint": "biome lint && markdownlint-cli2 \"**/*.md\" && ./scripts/validate-skill-frontmatter.py",
+    "lint:fix": "biome lint --write && markdownlint-cli2 --fix \"**/*.md\"",
+    "validate": "npm run format:check && npm run lint"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.4",
+    "markdownlint-cli2": "^0.14.0",
+    "prettier": "^3.3.3"
+  }
+}

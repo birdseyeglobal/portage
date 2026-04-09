@@ -17,13 +17,13 @@ If you cannot point to a specific speech artifact or transcription error, do not
 
 Spoken English uses "like" as a verbal pause. Remove it when it serves no grammatical function. Keep it when it means "such as" or "similar to."
 
-| Before | After | Why |
-|--------|-------|-----|
-| has like a road map | has a road map | filler before article |
-| is like no more than three digits | is no more than three digits | filler before adverb |
-| was like AI is important | where the message was AI is important | filler replacing a clause |
-| a mega corp like Apple | a mega corp like Apple | means "such as" -- keep |
-| a generic topic like generative engine optimization | a generic topic like generative engine optimization | means "such as" -- keep |
+| Before                                              | After                                               | Why                       |
+| --------------------------------------------------- | --------------------------------------------------- | ------------------------- |
+| has like a road map                                 | has a road map                                      | filler before article     |
+| is like no more than three digits                   | is no more than three digits                        | filler before adverb      |
+| was like AI is important                            | where the message was AI is important               | filler replacing a clause |
+| a mega corp like Apple                              | a mega corp like Apple                              | means "such as" -- keep   |
+| a generic topic like generative engine optimization | a generic topic like generative engine optimization | means "such as" -- keep   |
 
 **Test:** Remove "like" and read the sentence. If it still makes grammatical sense and the meaning is unchanged, the "like" was filler.
 
@@ -31,11 +31,11 @@ Spoken English uses "like" as a verbal pause. Remove it when it serves no gramma
 
 Speakers routinely break grammar rules that readers notice on the page. Fix subject-verb agreement and comparison constructions.
 
-| Before | After | Rule |
-|--------|-------|------|
-| there's so many signals | there are so many signals | subject-verb agreement ("signals" is plural) |
-| as powerful than if we had | as powerful as if we had | "as...as" comparison, not "as...than" |
-| as much of a signal than if | as much of a signal as if | same pattern |
+| Before                      | After                     | Rule                                         |
+| --------------------------- | ------------------------- | -------------------------------------------- |
+| there's so many signals     | there are so many signals | subject-verb agreement ("signals" is plural) |
+| as powerful than if we had  | as powerful as if we had  | "as...as" comparison, not "as...than"        |
+| as much of a signal than if | as much of a signal as if | same pattern                                 |
 
 **Test:** Read the sentence aloud slowly. If the grammar error is obvious when spoken deliberately rather than quickly, fix it.
 
@@ -43,26 +43,26 @@ Speakers routinely break grammar rules that readers notice on the page. Fix subj
 
 Speakers front-load or rearrange words in ways that read awkwardly on paper. Restore standard English word order.
 
-| Before | After |
-|--------|-------|
-| put in specifically keywords | specifically put in keywords |
+| Before                                 | After                             |
+| -------------------------------------- | --------------------------------- |
+| put in specifically keywords           | specifically put in keywords      |
 | that's like deep on a bottom of funnel | that's deep on a bottom-of-funnel |
 
 ### 4. Orphan words
 
 Mid-sentence restructuring during speech leaves behind words that no longer connect to anything. Remove them.
 
-| Before | After | Orphan |
-|--------|-------|--------|
+| Before                          | After                     | Orphan                                     |
+| ------------------------------- | ------------------------- | ------------------------------------------ |
 | things that while seem exciting | things that seem exciting | "while" left over from an abandoned clause |
 
 ### 5. Transcription artifacts
 
 Speech-to-text engines sometimes drop words, merge sentences, or mishear connectives. Restore the minimal missing words needed for the sentence to parse.
 
-| Before | After | Fix |
-|--------|-------|-----|
-| was like AI is important | where the message was AI is important | restored dropped clause |
+| Before                                                                    | After                                                                      | Fix                                               |
+| ------------------------------------------------------------------------- | -------------------------------------------------------------------------- | ------------------------------------------------- |
+| was like AI is important                                                  | where the message was AI is important                                      | restored dropped clause                           |
 | who is higher up in the organization chart like a chief marketing officer | who is higher up in the organization chart, like a chief marketing officer | added comma before "like" (parenthetical example) |
 
 Only add words when the sentence is genuinely unparseable without them. If the meaning is clear despite missing words, leave it alone.

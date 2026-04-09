@@ -88,13 +88,16 @@ Load what you need. Skip what you don't.
 ## Plugin Files
 
 ### Agents
+
 - [copy-desk](agents/copy-desk.md)
 
 ### Commands
+
 - [editorial-review](commands/editorial-review.md)
 - [prose-check](commands/prose-check.md)
 
 ### Skills
+
 - [citation-sourcing](skills/citation-sourcing/SKILL.md)
 - [humanizer](skills/humanizer/SKILL.md)
 - [prose-craft](skills/prose-craft/SKILL.md)

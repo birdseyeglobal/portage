@@ -2,7 +2,7 @@
 
 A marketplace for portable AI-assistant extensions.
 
-Portage packages skills, commands, and agents as Claude Code plugins *and* exposes the skills under `.agents/skills/` so tools that follow the Open Skills Standard — Cursor, Codex, OpenCode, and others — can use them without a separate install. Skills are the portable unit: they work anywhere the standard is supported. The plugin format is the richer unit: Claude Code users get skills bundled with commands and agents.
+Portage packages skills, commands, and agents as Claude Code plugins _and_ exposes the skills under `.agents/skills/` so tools that follow the Open Skills Standard — Cursor, Codex, OpenCode, and others — can use them without a separate install. Skills are the portable unit: they work anywhere the standard is supported. The plugin format is the richer unit: Claude Code users get skills bundled with commands and agents.
 
 ## What's inside
 
@@ -15,7 +15,7 @@ Portage packages skills, commands, and agents as Claude Code plugins *and* expos
 
 Add the marketplace, then install the plugin:
 
-```
+```text
 /plugin marketplace add grootenberg/Portage
 /plugin install prose@portage
 ```
@@ -31,7 +31,8 @@ Point your tool at `.agents/skills/` — no extra setup.
 1. Drop the plugin into `plugins/<plugin-name>/` following the existing structure.
 2. Register it in `.claude-plugin/marketplace.json`.
 3. Run the link script:
-   ```
+
+   ```sh
    ./scripts/link-marketplace-skills.sh
    ```
 

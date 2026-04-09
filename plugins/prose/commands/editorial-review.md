@@ -98,7 +98,6 @@ review with parallel Copy Desk evaluation.
    independently in a fresh context.
 
    Dispatch all agents in a single message so they run simultaneously:
-
    - **Universal quality** — consistency, clarity of intent, progressive
      development
    - **Voice compliance** — register, person, evidence norms, jargon stance
