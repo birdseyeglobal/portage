@@ -7,25 +7,22 @@ Portage is early. Governance is still being settled. In the meantime:
 After cloning:
 
 ```sh
-npm install
-pre-commit install
+bun install
 ```
 
-`npm install` pulls in Biome, Prettier, and markdownlint-cli2.
-`pre-commit install` wires the hooks so every commit is checked automatically.
-Install `pre-commit` itself via `pipx install pre-commit` or `brew install pre-commit` if you don't have it yet.
+This pulls in Biome, Prettier, and markdownlint-cli2.
 
 ## What gets checked
 
-Every commit (and every CI run) validates:
+CI validates every push and pull request:
 
 - **JSON formatting and lint** — Biome, scoped to `**/*.json`
 - **Markdown formatting** — Prettier, scoped to `**/*.md`
 - **Markdown linting** — markdownlint-cli2, basic heading and code-block rules
 - **SKILL.md frontmatter** — strict schema: only `name` and `description` are allowed; `name` must match the skill's directory
-- **Marketplace symlinks** — `./scripts/link-marketplace-skills.sh` is auto-run when anything under `plugins/*/skills/` changes, and CI verifies the result is committed
+- **Marketplace symlinks** — CI verifies that `.claude/skills/` and `.agents/skills` are up to date with the output of `./scripts/link-marketplace-skills.sh`
 
-Run everything manually with `npm run validate` (format check + lint + skill frontmatter).
+Run everything locally with `bun run validate` (format check + lint + skill frontmatter).
 
 ## Contribution guidelines
 

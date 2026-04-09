@@ -7,9 +7,12 @@
   "scripts": {
     "format": "biome format --write && prettier --write \"**/*.md\"",
     "format:check": "biome format && prettier --check \"**/*.md\"",
-    "lint": "biome lint && markdownlint-cli2 \"**/*.md\" && ./scripts/validate-skill-frontmatter.py",
-    "lint:fix": "biome lint --write && markdownlint-cli2 --fix \"**/*.md\"",
-    "validate": "npm run format:check && npm run lint"
+    "lint:md": "markdownlint-cli2",
+    "lint:json": "biome lint",
+    "lint:skills": "bun scripts/validate-skill-frontmatter.ts",
+    "lint": "bun run lint:json && bun run lint:md && bun run lint:skills",
+    "validate": "bun run format:check && bun run lint",
+    "link-skills": "./scripts/link-marketplace-skills.sh"
   },
   "devDependencies": {
     "@biomejs/biome": "^1.9.4",
