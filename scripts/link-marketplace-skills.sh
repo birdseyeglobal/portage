@@ -35,13 +35,13 @@ for skill_md in "$PLUGINS_DIR"/*/skills/*/SKILL.md; do
       plugin_name="$(basename "$(dirname "$(dirname "$skill_dir")")")"
       expected_target="../../plugins/$plugin_name/skills/$skill_name"
       if [ "$existing_target" = "$expected_target" ]; then
-        ((linked++))
+        linked=$((linked + 1))
         continue
       fi
     fi
     plugin_name="$(basename "$(dirname "$(dirname "$skill_dir")")")"
     warnings+=("COLLISION: '$skill_name' from '$plugin_name' skipped -- already exists in .claude/skills/")
-    ((skipped++))
+    skipped=$((skipped + 1))
     continue
   fi
 
@@ -49,7 +49,7 @@ for skill_md in "$PLUGINS_DIR"/*/skills/*/SKILL.md; do
   plugin_name="$(basename "$(dirname "$(dirname "$skill_dir")")")"
   relative_target="../../plugins/$plugin_name/skills/$skill_name"
   ln -s "$relative_target" "$link_path"
-  ((linked++))
+  linked=$((linked + 1))
 done
 
 # Clean stale symlinks
@@ -59,7 +59,7 @@ for link in "$CLAUDE_SKILLS_DIR"/*/; do
     stale_name="$(basename "${link%/}")"
     rm "$CLAUDE_SKILLS_DIR/$stale_name"
     warnings+=("STALE: removed '$stale_name' (target no longer exists)")
-    ((stale_removed++))
+    stale_removed=$((stale_removed + 1))
   fi
 done
 
