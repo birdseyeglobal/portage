@@ -18,7 +18,7 @@ Portage packages skills, commands, and agents as Claude Code plugins _and_ expos
 Add the marketplace, then install the plugin:
 
 ```text
-/plugin marketplace add grootenberg/Portage
+/plugin marketplace add grootenberg/portage
 /plugin install prose@portage
 ```
 
