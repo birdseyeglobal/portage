@@ -16,6 +16,10 @@
     {
       "name": "styleguide",
       "source": "./plugins/styleguide"
+    },
+    {
+      "name": "geo",
+      "source": "./plugins/geo"
     }
   ]
 }
