@@ -1,0 +1,22 @@
+{
+  "name": "styleguide",
+  "version": "0.1.0",
+  "description": "Standalone organization-wide style guides for communication, visual communication surfaces, docs, GitHub work, stakeholder updates, and AI artifact cleanup",
+  "author": {
+    "name": "Christopher Rock"
+  },
+  "license": "MIT",
+  "keywords": [
+    "writing",
+    "styleguide",
+    "editing",
+    "prose",
+    "communication",
+    "visual-styleguide",
+    "documentation",
+    "stakeholder-updates",
+    "pull-requests",
+    "issues"
+  ],
+  "skills": ["./skills/styleguide", "./skills/visual-styleguide"]
+}

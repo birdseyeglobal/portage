@@ -1,0 +1,92 @@
+<!doctype html><html><head><meta charset="utf-8">
+<title>Type — Families</title>
+<link rel="stylesheet" href="_base.css">
+<style>
+  body { padding:28px; display:flex; flex-direction:column; gap:24px; }
+  .head h1 { font-family:var(--fontFamily-headings); font-weight:700; font-size:20px; letter-spacing:-0.2px; }
+  .head .s { font-family:var(--fontFamily-body); font-size:13px; color:var(--color-grey-600); margin-top:4px; line-height:18px; }
+  .fam { display:grid; grid-template-columns: 180px 1fr; gap:20px; padding:20px 0; border-top:1px solid var(--color-grey-100); }
+  .fam:first-of-type { border-top:0; padding-top:0; }
+  .meta { display:flex; flex-direction:column; gap:6px; }
+  .meta .name { font-family:var(--fontFamily-headings); font-weight:700; font-size:17px; letter-spacing:-0.16px; color:var(--color-grey-1000); }
+  .meta .role { font-family:var(--font-mono); font-size:10px; text-transform:uppercase; letter-spacing:0.08em; color:var(--color-grey-500); }
+  .meta .desc { font-family:var(--fontFamily-body); font-size:12px; line-height:17px; color:var(--color-grey-600); }
+  .meta .token { font-family:var(--font-mono); font-size:10px; color:var(--color-grey-400); margin-top:4px; }
+  .specimen .big { font-size:56px; line-height:60px; letter-spacing:-0.02em; color:var(--color-grey-1000); margin-bottom:8px; }
+  .specimen.dm .big { font-family:'DM Sans'; font-weight:700; }
+  .specimen.inter .big { font-family:'Inter'; font-weight:500; letter-spacing:-0.01em; }
+  .specimen.mono .big { font-family:'Geist Mono'; font-weight:500; font-size:36px; line-height:40px; letter-spacing:-0.01em; }
+  .weights { display:flex; flex-wrap:wrap; gap:14px; font-size:16px; line-height:20px; color:var(--color-grey-1000); }
+  .weights span { border-bottom:1px dashed var(--color-grey-200); padding-bottom:2px; }
+  .specimen.dm .weights { font-family:'DM Sans'; }
+  .specimen.inter .weights { font-family:'Inter'; }
+  .specimen.mono .weights { font-family:'Geist Mono'; }
+  .glyphs { font-size:22px; line-height:28px; color:var(--color-grey-700); letter-spacing:0; margin-top:4px; }
+  .specimen.dm .glyphs { font-family:'DM Sans'; font-weight:500; }
+  .specimen.inter .glyphs { font-family:'Inter'; font-weight:400; }
+  .specimen.mono .glyphs { font-family:'Geist Mono'; font-weight:400; font-size:18px; }
+</style>
+</head>
+<body>
+
+<div class="head">
+  <h1>Three families, three jobs</h1>
+  <div class="s">DM Sans structures the screen. Inter reads a paragraph. Geist Mono shows you a number.</div>
+</div>
+
+<div class="fam">
+  <div class="meta">
+    <div class="name">DM Sans</div>
+    <div class="role">Headings · Buttons</div>
+    <div class="desc">Every H1–H6, every button label, every eyebrow. Tight negative tracking, slightly condensed feel.</div>
+    <div class="token">--fontFamily-headings</div>
+  </div>
+  <div class="specimen dm">
+    <div class="big">See what AI sees.</div>
+    <div class="weights">
+      <span style="font-weight:400">Regular 400</span>
+      <span style="font-weight:500">Medium 500</span>
+      <span style="font-weight:600">SemiBold 600</span>
+      <span style="font-weight:700">Bold 700</span>
+    </div>
+    <div class="glyphs">AaBbCc 0123456789 &amp; ? !</div>
+  </div>
+</div>
+
+<div class="fam">
+  <div class="meta">
+    <div class="name">Inter</div>
+    <div class="role">Body · Captions</div>
+    <div class="desc">Paragraphs, table rows, input values, help text, tooltips. Default tracking; medium for emphasis.</div>
+    <div class="token">--fontFamily-body</div>
+  </div>
+  <div class="specimen inter">
+    <div class="big">Marketing teams use Yolando to shape the answers every LLM gives about their brand.</div>
+    <div class="weights">
+      <span style="font-weight:400">Regular 400</span>
+      <span style="font-weight:500">Medium 500</span>
+      <span style="font-weight:600">SemiBold 600</span>
+      <span style="font-weight:700">Bold 700</span>
+    </div>
+    <div class="glyphs">The quick brown fox jumps over the lazy dog.</div>
+  </div>
+</div>
+
+<div class="fam">
+  <div class="meta">
+    <div class="name">Geist Mono</div>
+    <div class="role">Code · Metrics</div>
+    <div class="desc">Tokens, hex codes, IDs, citation counts, chart read-outs. Never for body copy.</div>
+    <div class="token">--font-mono</div>
+  </div>
+  <div class="specimen mono">
+    <div class="big">visibility 72.4%</div>
+    <div class="weights">
+      <span style="font-weight:400">Regular 400</span>
+      <span style="font-weight:500">Medium 500</span>
+    </div>
+    <div class="glyphs">bg-brand · purple-500 · #6d65e1</div>
+  </div>
+</div>
+
+</body></html>

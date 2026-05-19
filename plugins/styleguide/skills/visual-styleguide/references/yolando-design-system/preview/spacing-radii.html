@@ -1,0 +1,50 @@
+<!doctype html><html><head><meta charset="utf-8">
+<title>Spacing — Radii</title>
+<link rel="stylesheet" href="_base.css">
+<style>
+  body { padding:24px; display:flex; flex-direction:column; gap:18px; }
+  .head h1 { font-family:var(--fontFamily-headings); font-weight:700; font-size:18px; letter-spacing:-0.16px; }
+  .head .s { font-family:var(--fontFamily-body); font-size:12px; color:var(--color-grey-600); margin-top:4px; }
+  .grid { display:grid; grid-template-columns:repeat(6,1fr); gap:14px; }
+  .sw { display:flex; flex-direction:column; gap:8px; align-items:center; }
+  .box { width:86px; height:68px; background:var(--color-purple-100); border:1px solid var(--color-purple-200); }
+  .name { font-family:var(--fontFamily-headings); font-weight:600; font-size:12px; color:var(--color-grey-1000); letter-spacing:-0.14px; }
+  .val { font-family:var(--font-mono); font-size:10px; color:var(--color-grey-500); text-transform:uppercase; }
+  .grp { font-family:var(--fontFamily-headings); font-weight:600; font-size:10px; text-transform:uppercase; letter-spacing:0.12em; color:var(--color-grey-400); }
+  .use { display:grid; grid-template-columns:repeat(2,1fr); gap:10px; border-top:1px solid var(--color-grey-100); padding-top:14px; }
+  .use .c { display:flex; gap:10px; align-items:center; font-family:var(--fontFamily-body); font-size:12px; color:var(--color-grey-700); line-height:16px; }
+  .use .c .d { width:36px; height:24px; background:var(--color-grey-800); flex:none; }
+  .use .c b { font-family:var(--fontFamily-headings); font-weight:600; color:var(--color-grey-1000); letter-spacing:-0.14px; }
+</style>
+</head>
+<body>
+
+<div class="head">
+  <h1>Corner radii</h1>
+  <div class="s">Five steps plus pill. Cards are <span class="mono">400</span>, buttons/inputs are <span class="mono">200</span>, dropdowns are <span class="mono">300</span>.</div>
+</div>
+
+<div class="grp">Scale</div>
+<div class="grid">
+  <div class="sw"><div class="box" style="border-radius:0"></div><div class="name">none</div><div class="val">0 · hairline</div></div>
+  <div class="sw"><div class="box" style="border-radius:2px"></div><div class="name">50</div><div class="val">2px · dots</div></div>
+  <div class="sw"><div class="box" style="border-radius:4px"></div><div class="name">100</div><div class="val">4px · tags</div></div>
+  <div class="sw"><div class="box" style="border-radius:8px"></div><div class="name">200</div><div class="val">8px · buttons</div></div>
+  <div class="sw"><div class="box" style="border-radius:12px"></div><div class="name">300</div><div class="val">12px · menus</div></div>
+  <div class="sw"><div class="box" style="border-radius:16px"></div><div class="name">400</div><div class="val">16px · cards</div></div>
+</div>
+<div class="grid" style="grid-template-columns:1fr; justify-items:start">
+  <div class="sw"><div class="box" style="border-radius:999999px; width:140px"></div><div class="name">round</div><div class="val">999999px · pills · avatars</div></div>
+</div>
+
+<div class="grp">Where they apply</div>
+<div class="use">
+  <div class="c"><div class="d" style="border-radius:8px"></div><div><b>Buttons · inputs · chips</b><br>borderRadius-200</div></div>
+  <div class="c"><div class="d" style="border-radius:12px"></div><div><b>Dropdowns · toasts</b><br>borderRadius-300</div></div>
+  <div class="c"><div class="d" style="border-radius:16px"></div><div><b>Cards · panels · dialogs</b><br>borderRadius-400</div></div>
+  <div class="c"><div class="d" style="border-radius:4px"></div><div><b>Tiny tags · code inline</b><br>borderRadius-100</div></div>
+  <div class="c"><div class="d" style="border-radius:999999px; width:24px; height:24px"></div><div><b>Pills · avatars · status dots</b><br>borderRadius-round</div></div>
+  <div class="c"><div class="d" style="border-radius:2px; width:8px; height:8px"></div><div><b>Bullets · indicators</b><br>borderRadius-50</div></div>
+</div>
+
+</body></html>

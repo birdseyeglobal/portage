@@ -1,0 +1,102 @@
+<!doctype html><html><head><meta charset="utf-8">
+<title>Colors — Neutrals</title>
+<link rel="stylesheet" href="_base.css">
+<style>
+  body { padding: 24px; display:flex; flex-direction:column; gap:20px; }
+  .head { display:flex; justify-content:space-between; align-items:baseline; }
+  .head h1 { font-family:var(--fontFamily-headings); font-weight:700; font-size:18px; letter-spacing:-0.16px; }
+  .ramp { display:grid; grid-template-columns: repeat(11, 1fr); border:1px solid var(--color-grey-200); border-radius:12px; overflow:hidden; }
+  .stop { aspect-ratio: 1/1.25; display:flex; flex-direction:column; justify-content:flex-end; padding:8px 6px; gap:2px; border-right:1px solid rgba(255,255,255,.12); }
+  .stop:last-child { border-right:0; }
+  .stop .n, .stop .h { font-family: var(--font-mono); line-height:12px; }
+  .stop .n { font-size:10px; }
+  .stop .h { font-size:9px; opacity:.8; text-transform:uppercase; }
+  .twin { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .panel { border:1px solid var(--color-grey-200); border-radius:12px; overflow:hidden; }
+  .panel .hdr { padding:12px 14px; display:flex; justify-content:space-between; align-items:baseline; background:var(--color-grey-50); border-bottom:1px solid var(--color-grey-200); }
+  .panel .hdr .t { font-family:var(--fontFamily-headings); font-weight:600; font-size:13px; }
+  .panel .body { padding:14px; display:flex; flex-direction:column; gap:8px; }
+  .row-stop { display:flex; align-items:center; gap:10px; }
+  .row-stop .sw { width:28px; height:28px; border-radius:6px; border:1px solid rgba(0,0,0,.06); flex:none; }
+  .row-stop .l { font-family:var(--fontFamily-headings); font-weight:600; font-size:12px; }
+  .row-stop .h { font-family:var(--font-mono); font-size:10px; color:var(--color-grey-500); margin-left:auto; text-transform:uppercase; }
+  .alpha { display:grid; grid-template-columns: repeat(11, 1fr); gap:4px; }
+  .alpha .a { height:44px; border-radius:6px; font-family:var(--font-mono); font-size:9px; color:var(--color-grey-1000); padding:4px 5px; line-height:11px; }
+  .alpha .ondark .a { color:#fff; }
+</style>
+</head>
+<body>
+
+<div class="head">
+  <h1>Neutrals — grey</h1>
+  <div class="mono">--color-grey-{50…1000}</div>
+</div>
+
+<div class="ramp">
+  <div class="stop" style="background:#f8f8f8;color:#161518"><div class="n">50</div><div class="h">#f8f8f8</div></div>
+  <div class="stop" style="background:#e4e4e4;color:#161518"><div class="n">100</div><div class="h">#e4e4e4</div></div>
+  <div class="stop" style="background:#cbcbcf;color:#161518"><div class="n">200</div><div class="h">#cbcbcf</div></div>
+  <div class="stop" style="background:#a3a3a6;color:#161518"><div class="n">300</div><div class="h">#a3a3a6</div></div>
+  <div class="stop" style="background:#7e7e80;color:#fff"><div class="n">400</div><div class="h">#7e7e80</div></div>
+  <div class="stop" style="background:#616163;color:#fff"><div class="n">500</div><div class="h">#616163</div></div>
+  <div class="stop" style="background:#464649;color:#fff"><div class="n">600</div><div class="h">#464649</div></div>
+  <div class="stop" style="background:#353538;color:#fff"><div class="n">700</div><div class="h">#353538</div></div>
+  <div class="stop" style="background:#2a292d;color:#fff"><div class="n">800</div><div class="h">#2a292d</div></div>
+  <div class="stop" style="background:#201f22;color:#fff"><div class="n">900</div><div class="h">#201f22</div></div>
+  <div class="stop" style="background:#161518;color:#fff"><div class="n">1000</div><div class="h">#161518</div></div>
+</div>
+
+<div class="twin">
+  <div class="panel">
+    <div class="hdr"><div class="t">Light mode semantics</div><div class="mono">--*</div></div>
+    <div class="body">
+      <div class="row-stop"><div class="sw" style="background:#ffffff"></div><div class="l">bg-default</div><div class="h">#ffffff</div></div>
+      <div class="row-stop"><div class="sw" style="background:#f8f8f8"></div><div class="l">bg-bold</div><div class="h">grey-50</div></div>
+      <div class="row-stop"><div class="sw" style="background:#e4e4e4"></div><div class="l">bg-bolder</div><div class="h">grey-100</div></div>
+      <div class="row-stop"><div class="sw" style="background:#161518"></div><div class="l">bg-inverse · bg-tooltip</div><div class="h">grey-1000</div></div>
+      <div class="row-stop"><div class="sw" style="background:#e4e4e4"></div><div class="l">border-subtle</div><div class="h">grey-100</div></div>
+      <div class="row-stop"><div class="sw" style="background:#cbcbcf"></div><div class="l">border-default · border-card</div><div class="h">grey-200</div></div>
+      <div class="row-stop"><div class="sw" style="background:#a3a3a6"></div><div class="l">border-bold</div><div class="h">grey-300</div></div>
+      <div class="row-stop"><div class="sw" style="background:#161518"></div><div class="l">content-default</div><div class="h">grey-1000</div></div>
+      <div class="row-stop"><div class="sw" style="background:#2a292d"></div><div class="l">content-subtle</div><div class="h">grey-800</div></div>
+      <div class="row-stop"><div class="sw" style="background:#464649"></div><div class="l">content-subtler</div><div class="h">grey-600</div></div>
+      <div class="row-stop"><div class="sw" style="background:#7e7e80"></div><div class="l">content-subtlest</div><div class="h">grey-400</div></div>
+    </div>
+  </div>
+  <div class="panel" style="background:#161518;border-color:#2a292d;color:#fff">
+    <div class="hdr" style="background:#201f22;border-color:#2a292d;"><div class="t" style="color:#fff">Dark mode semantics</div><div class="mono" style="color:#a3a3a6">.dark --*</div></div>
+    <div class="body">
+      <div class="row-stop"><div class="sw" style="background:#161518;border-color:rgba(255,255,255,.1)"></div><div class="l" style="color:#fff">bg-default</div><div class="h" style="color:#a3a3a6">grey-1000</div></div>
+      <div class="row-stop"><div class="sw" style="background:#201f22;border-color:rgba(255,255,255,.1)"></div><div class="l" style="color:#fff">bg-bold</div><div class="h" style="color:#a3a3a6">grey-900</div></div>
+      <div class="row-stop"><div class="sw" style="background:#2a292d;border-color:rgba(255,255,255,.1)"></div><div class="l" style="color:#fff">bg-bolder</div><div class="h" style="color:#a3a3a6">grey-800</div></div>
+      <div class="row-stop"><div class="sw" style="background:#ffffff"></div><div class="l" style="color:#fff">bg-inverse</div><div class="h" style="color:#a3a3a6">white</div></div>
+      <div class="row-stop"><div class="sw" style="background:#2a292d;border-color:rgba(255,255,255,.1)"></div><div class="l" style="color:#fff">border-subtle</div><div class="h" style="color:#a3a3a6">grey-800</div></div>
+      <div class="row-stop"><div class="sw" style="background:#353538;border-color:rgba(255,255,255,.1)"></div><div class="l" style="color:#fff">border-default</div><div class="h" style="color:#a3a3a6">grey-700</div></div>
+      <div class="row-stop"><div class="sw" style="background:#464649;border-color:rgba(255,255,255,.1)"></div><div class="l" style="color:#fff">border-bold · border-card</div><div class="h" style="color:#a3a3a6">grey-600</div></div>
+      <div class="row-stop"><div class="sw" style="background:#ffffff"></div><div class="l" style="color:#fff">content-default</div><div class="h" style="color:#a3a3a6">white</div></div>
+      <div class="row-stop"><div class="sw" style="background:#e4e4e4"></div><div class="l" style="color:#fff">content-subtle</div><div class="h" style="color:#a3a3a6">grey-100</div></div>
+      <div class="row-stop"><div class="sw" style="background:#cbcbcf"></div><div class="l" style="color:#fff">content-subtler</div><div class="h" style="color:#a3a3a6">grey-200</div></div>
+      <div class="row-stop"><div class="sw" style="background:#a3a3a6"></div><div class="l" style="color:#fff">content-subtlest</div><div class="h" style="color:#a3a3a6">grey-300</div></div>
+    </div>
+  </div>
+</div>
+
+<div>
+  <div class="eyebrow" style="margin-bottom:8px">greyAlpha — for hover &amp; nav states (same on both themes)</div>
+  <div class="alpha">
+    <div class="a" style="background:rgba(97,97,99,.05)">.05</div>
+    <div class="a" style="background:rgba(97,97,99,.10)">.10</div>
+    <div class="a" style="background:rgba(97,97,99,.20)">.20</div>
+    <div class="a" style="background:rgba(97,97,99,.30)">.30</div>
+    <div class="a" style="background:rgba(97,97,99,.40)">.40</div>
+    <div class="a" style="background:rgba(97,97,99,.50)">.50</div>
+    <div class="a" style="background:rgba(97,97,99,.60)">.60</div>
+    <div class="a" style="background:rgba(97,97,99,.70);color:#fff">.70</div>
+    <div class="a" style="background:rgba(97,97,99,.80);color:#fff">.80</div>
+    <div class="a" style="background:rgba(97,97,99,.90);color:#fff">.90</div>
+    <div class="a" style="background:rgba(97,97,99,.95);color:#fff">.95</div>
+  </div>
+  <div class="sub" style="margin-top:6px">Base: <span class="mono">#616163</span> (grey-500). <span class="mono">greyAlpha-100</span> powers <span class="mono">bg-nav-hover</span>; <span class="mono">greyAlpha-200</span> powers <span class="mono">bg-nav-active</span>, <span class="mono">bg-skeleton</span>, <span class="mono">bg-tab</span>.</div>
+</div>
+
+</body></html>

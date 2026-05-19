@@ -1,0 +1,93 @@
+<!doctype html><html><head><meta charset="utf-8">
+<title>Components — Inputs</title>
+<link rel="stylesheet" href="_base.css">
+<style>
+  body { padding:24px; display:grid; grid-template-columns:1fr 1fr; gap:18px; }
+  .full { grid-column:1/-1; }
+  label { display:flex; flex-direction:column; gap:6px; }
+  .lbl { font-family:var(--fontFamily-headings); font-weight:600; font-size:12px; letter-spacing:-0.12px; color:#161518; }
+  .hint { font-family:var(--fontFamily-body); font-size:12px; color:#7e7e80; line-height:16px; }
+  .err { color:#df3131; }
+
+  .input, .textarea, .select {
+    font-family: var(--fontFamily-body); font-size:14px; line-height:20px;
+    height:36px; padding:0 12px;
+    border:1px solid #cbcbcf; border-radius:8px;
+    background:#fff; color:#161518; outline:none; transition:.12s;
+  }
+  .input::placeholder, .textarea::placeholder { color:#a3a3a6; }
+  .input.focus, .textarea.focus { border-color:#6d65e1; box-shadow:0 0 0 3px rgba(97,97,99,.30); }
+  .input.error { border-color:#df3131; }
+  .input:disabled, .input.disabled { background:#f8f8f8; color:#a3a3a6; cursor:not-allowed; }
+
+  .grp { display:flex; }
+  .grp .input { border-radius:8px 0 0 8px; border-right:0; flex:1; }
+  .grp .suffix { display:flex; align-items:center; padding:0 12px; border:1px solid #cbcbcf; border-radius:0 8px 8px 0; background:#f8f8f8; font-family:var(--font-mono); font-size:12px; color:#616163; }
+
+  .search { position:relative; }
+  .search svg { position:absolute; left:12px; top:10px; color:#7e7e80; }
+  .search .input { padding-left:34px; }
+
+  .textarea { height:auto; min-height:72px; padding:10px 12px; resize:vertical; }
+  .select { appearance:none; background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23616163' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><polyline points='6 9 12 15 18 9'/></svg>"); background-position:right 12px center; background-repeat:no-repeat; padding-right:32px; }
+
+  .head { grid-column:1/-1; }
+  .head h1 { font-family:var(--fontFamily-headings); font-weight:700; font-size:18px; letter-spacing:-0.16px; }
+  .head .s { font-family:var(--fontFamily-body); font-size:12px; color:#616163; margin-top:4px; }
+</style>
+</head>
+<body>
+
+<div class="head">
+  <h1>Inputs</h1>
+  <div class="s"><span class="mono">borderRadius-200</span> · 36px height · <span class="mono">border-input</span> = grey-200 · focus uses purple border + greyAlpha-300 ring.</div>
+</div>
+
+<label>
+  <span class="lbl">Brand domain</span>
+  <div class="grp">
+    <input class="input" value="birdseyepost.com">
+    <span class="suffix">/brand</span>
+  </div>
+  <span class="hint">We'll track how LLMs answer prompts about this domain.</span>
+</label>
+
+<label>
+  <span class="lbl">Search</span>
+  <div class="search">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+    <input class="input" placeholder="Search competitors, topics, prompts…">
+  </div>
+</label>
+
+<label>
+  <span class="lbl">Topic (focused)</span>
+  <input class="input focus" value="generative engine optimization">
+  <span class="hint">3px greyAlpha ring · purple border</span>
+</label>
+
+<label>
+  <span class="lbl">API key</span>
+  <input class="input error" value="sk-yln_mslf">
+  <span class="hint err">Key looks malformed — should start with <span class="mono">sk-yln_</span></span>
+</label>
+
+<label>
+  <span class="lbl">Frequency</span>
+  <select class="select">
+    <option>Real-time</option><option>Hourly</option><option>Daily digest</option><option>Weekly</option>
+  </select>
+</label>
+
+<label>
+  <span class="lbl">Owner (disabled)</span>
+  <input class="input disabled" value="corey@birdseyepost.com" disabled>
+</label>
+
+<label class="full">
+  <span class="lbl">Prompt</span>
+  <textarea class="textarea">Rewrite this article to strengthen Yolando's positioning vs legacy SEO tools. Lead with the citation-rate stat. Punchy, marketer-native.</textarea>
+  <span class="hint">Shift + Enter for a new line · Cmd + Enter to send</span>
+</label>
+
+</body></html>

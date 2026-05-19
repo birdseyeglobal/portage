@@ -20,6 +20,7 @@ Add the marketplace, then install the plugin:
 ```text
 /plugin marketplace add grootenberg/portage
 /plugin install prose@portage
+/plugin install styleguide@portage
 ```
 
 ## Use skills in other tools
@@ -45,6 +46,7 @@ Re-run the script only when skills are added or removed. Edits inside an existin
 ## Available plugins
 
 - **[prose](plugins/prose/)** — composable content quality toolkit. Seven skills for writing craft, citations, SEO, video scripts, social posts, transcript cleanup, and AI artifact removal, plus two commands that chain them into editorial workflows.
+- **[styleguide](plugins/styleguide/)** — standalone organization-wide style guide for internal updates, customer-facing notes, docs, GitHub work, stakeholder communication, and AI artifact cleanup.
 
 ## License
 
