@@ -1,0 +1,52 @@
+<!doctype html><html><head><meta charset="utf-8">
+<title>Spacing — Scale</title>
+<link rel="stylesheet" href="_base.css">
+<style>
+  body { padding:24px; display:flex; flex-direction:column; gap:16px; }
+  .head h1 { font-family:var(--fontFamily-headings); font-weight:700; font-size:18px; letter-spacing:-0.16px; }
+  .head .s { font-family:var(--fontFamily-body); font-size:12px; color:var(--color-grey-600); margin-top:4px; }
+  .row { display:grid; grid-template-columns: 130px 80px 1fr; align-items:center; gap:12px; padding:4px 0; }
+  .t { font-family:var(--font-mono); font-size:11px; color:var(--color-grey-700); }
+  .px { font-family:var(--font-mono); font-size:11px; color:var(--color-grey-400); text-align:right; }
+  .bar { background:var(--color-purple-300); height:14px; border-radius:3px; }
+  .grp { font-family:var(--fontFamily-headings); font-weight:600; font-size:10px; text-transform:uppercase; letter-spacing:0.12em; color:var(--color-grey-400); margin-top:6px; }
+  .note { font-family:var(--fontFamily-body); font-size:12px; color:var(--color-grey-600); border-top:1px solid var(--color-grey-100); padding-top:12px; line-height:17px; }
+  .note code { font-family:var(--font-mono); font-size:11px; color:var(--color-grey-800); background:var(--color-grey-50); padding:1px 4px; border-radius:3px; }
+</style>
+</head>
+<body>
+
+<div class="head">
+  <h1>Spacing scale</h1>
+  <div class="s">4px base. Token <span class="mono">100 = 4px</span>, <span class="mono">400 = 16px</span>. Half-steps exist for fine adjustments.</div>
+</div>
+
+<div class="grp">Fine — subtleties</div>
+<div class="row"><span class="t">--spacing-050</span><span class="px">2px</span><div class="bar" style="width:2px"></div></div>
+<div class="row"><span class="t">--spacing-100</span><span class="px">4px</span><div class="bar" style="width:4px"></div></div>
+<div class="row"><span class="t">--spacing-150</span><span class="px">6px</span><div class="bar" style="width:6px"></div></div>
+
+<div class="grp">UI — everyday padding &amp; gaps</div>
+<div class="row"><span class="t">--spacing-200</span><span class="px">8px</span><div class="bar" style="width:8px"></div></div>
+<div class="row"><span class="t">--spacing-250</span><span class="px">10px</span><div class="bar" style="width:10px"></div></div>
+<div class="row"><span class="t">--spacing-300</span><span class="px">12px</span><div class="bar" style="width:12px"></div></div>
+<div class="row"><span class="t">--spacing-400</span><span class="px">16px</span><div class="bar" style="width:16px"></div></div>
+<div class="row"><span class="t">--spacing-500</span><span class="px">20px</span><div class="bar" style="width:20px"></div></div>
+<div class="row"><span class="t">--spacing-600</span><span class="px">24px</span><div class="bar" style="width:24px"></div></div>
+<div class="row"><span class="t">--spacing-700</span><span class="px">28px</span><div class="bar" style="width:28px"></div></div>
+<div class="row"><span class="t">--spacing-800</span><span class="px">32px</span><div class="bar" style="width:32px"></div></div>
+
+<div class="grp">Layout — sections &amp; pages</div>
+<div class="row"><span class="t">--spacing-1000</span><span class="px">40px</span><div class="bar" style="width:40px"></div></div>
+<div class="row"><span class="t">--spacing-1200</span><span class="px">48px</span><div class="bar" style="width:48px"></div></div>
+<div class="row"><span class="t">--spacing-1600</span><span class="px">64px</span><div class="bar" style="width:64px"></div></div>
+<div class="row"><span class="t">--spacing-2000</span><span class="px">80px</span><div class="bar" style="width:80px"></div></div>
+<div class="row"><span class="t">--spacing-2400</span><span class="px">96px</span><div class="bar" style="width:96px"></div></div>
+<div class="row"><span class="t">--spacing-3200</span><span class="px">128px</span><div class="bar" style="width:128px"></div></div>
+
+<div class="note">
+  Most cards pad <code>spacing-600</code> (24px) on the outside, <code>spacing-300</code> (12px) between rows.
+  Section headers: <code>spacing-600</code> horizontal, <code>spacing-400</code> vertical. Page sections on marketing surfaces: <code>spacing-1600</code>–<code>spacing-2400</code>.
+</div>
+
+</body></html>

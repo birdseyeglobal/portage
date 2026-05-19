@@ -1,0 +1,64 @@
+<!doctype html><html><head><meta charset="utf-8">
+<title>Voice - Yolando</title><link rel="stylesheet" href="_base.css">
+<style>
+  body{padding:24px;display:flex;flex-direction:column;gap:14px}
+  .pair{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .card{padding:14px 16px;border:1px solid var(--border-subtle);border-radius:var(--borderRadius-300);background:#fff;display:flex;flex-direction:column;gap:8px}
+  .card .tag{font-family:var(--fontFamily-headings);font-weight:var(--fontWeight-medium);font-size:11px;letter-spacing:.1em;text-transform:uppercase}
+  .card .body{font-family:var(--fontFamily-headings);font-weight:var(--fontWeight-semibold);font-size:17px;line-height:1.25;letter-spacing:-.28px;color:var(--content-default);text-wrap:balance}
+  .yes{border-color:var(--color-green-200);background:var(--color-greenAlpha-100)}
+  .yes .tag{color:var(--color-green-500)}
+  .no{border-color:var(--color-red-200);background:var(--color-redAlpha-100)}
+  .no .tag{color:var(--color-red-600)}
+  .no .body{color:var(--color-grey-500);text-decoration:line-through;text-decoration-color:var(--color-red-200)}
+  .pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+  .pillar{padding:14px;border:1px solid var(--color-purple-200);border-radius:var(--borderRadius-300);background:var(--color-purple-50)}
+  .pillar b{font-family:var(--fontFamily-headings);font-weight:var(--fontWeight-bold);font-size:13px;color:var(--content-default);display:block;margin-bottom:4px;letter-spacing:-.14px}
+  .pillar p{font-family:var(--fontFamily-body);font-size:12px;color:var(--content-subtler);line-height:1.45}
+  .rules{display:flex;gap:8px;flex-wrap:wrap;padding:10px 0 0}
+  .rule{font-family:var(--fontFamily-body);font-size:12px;padding:4px 10px;border-radius:999px;border:1px solid var(--border-default);background:#fff;color:var(--content-subtler)}
+  .rule b{color:var(--content-default);font-weight:var(--fontWeight-semibold)}
+  .rule.ban{border-color:var(--color-red-200);background:var(--color-redAlpha-100);color:var(--color-red-700)}
+  .rule.ban s{text-decoration:line-through;text-decoration-color:var(--color-red-400)}
+</style></head><body>
+<div class="eyebrow">Voice pillars</div>
+<div class="pillars">
+  <div class="pillar"><b>Sharp, never glib</b><p>Short sentences. Actual nouns. We earn the mic-drop.</p></div>
+  <div class="pillar"><b>Evidence over hype</b><p>Numbers, citations, receipts. No "revolutionary."</p></div>
+  <div class="pillar"><b>Confident + curious</b><p>We don't lecture. We help you see what AI sees.</p></div>
+</div>
+
+<div class="pair">
+  <div class="card yes">
+    <span class="tag">Yes</span>
+    <span class="body">"You're cited in 34% of 'AI SEO' prompts. Here's how to get to 60%."</span>
+  </div>
+  <div class="card no">
+    <span class="tag">No</span>
+    <span class="body">"Unlock next-gen AI visibility with our revolutionary platform."</span>
+  </div>
+  <div class="card yes">
+    <span class="tag">Yes</span>
+    <span class="body">"Claude didn't mention you. Three reasons why, and a fix for each."</span>
+  </div>
+  <div class="card no">
+    <span class="tag">No</span>
+    <span class="body">"Maximize your brand presence across all LLM ecosystems seamlessly."</span>
+  </div>
+</div>
+
+<div class="eyebrow" style="margin-top:6px">Punctuation &amp; banned words</div>
+<div class="rules">
+  <span class="rule ban"><b>No em dashes.</b> Use a period, comma, or colon.</span>
+  <span class="rule ban"><s>revolutionary</s></span>
+  <span class="rule ban"><s>seamless / seamlessly</s></span>
+  <span class="rule ban"><s>unlock</s></span>
+  <span class="rule ban"><s>next-gen</s></span>
+  <span class="rule ban"><s>game-changer</s></span>
+  <span class="rule ban"><s>supercharge</s></span>
+  <span class="rule ban"><s>leverage</s> (as a verb)</span>
+  <span class="rule ban"><s>AI-powered</s> (we ARE the AI)</span>
+  <span class="rule"><b>Numbers first</b> when numbers matter.</span>
+  <span class="rule"><b>Second person.</b> "You're cited," not "users are cited."</span>
+</div>
+</body></html>

@@ -1,0 +1,46 @@
+<!doctype html><html><head><meta charset="utf-8">
+<title>Type — Scale</title>
+<link rel="stylesheet" href="_base.css">
+<style>
+  body { padding:28px; display:flex; flex-direction:column; gap:14px; }
+  .head h1 { font-family:var(--fontFamily-headings); font-weight:700; font-size:20px; letter-spacing:-0.2px; }
+  .head .s { font-family:var(--fontFamily-body); font-size:13px; color:var(--color-grey-600); margin-top:4px; }
+  .row { display:grid; grid-template-columns: 150px 1fr; gap:16px; align-items:baseline; padding:12px 0; border-top:1px solid var(--color-grey-100); }
+  .row:first-of-type { border-top:0; }
+  .tag { font-family:var(--font-mono); font-size:10px; text-transform:uppercase; color:var(--color-grey-500); line-height:14px; }
+  .tag .px { display:block; color:var(--color-grey-400); margin-top:2px; }
+  .sample { color:var(--color-grey-1000); word-break:break-word; }
+  .grp { font-family:var(--fontFamily-headings); font-weight:600; font-size:10px; text-transform:uppercase; letter-spacing:0.12em; color:var(--color-grey-400); margin:10px 0 -4px; }
+</style>
+</head>
+<body>
+
+<div class="head">
+  <h1>Composed type scale</h1>
+  <div class="s">Every <span class="mono" style="font-family:var(--font-mono)">.t-*</span> class in <span class="mono" style="font-family:var(--font-mono)">colors_and_type.css</span>. Names match <span class="mono" style="font-family:var(--font-mono)">seo_webapp/app/globals.css</span>.</div>
+</div>
+
+<div class="grp">Display &amp; headings — DM Sans</div>
+
+<div class="row"><div><div class="tag">.t-display-emphasized<span class="px">48 / 64 · SemiBold</span></div></div><div class="sample t-display-emphasized">See what AI sees.</div></div>
+<div class="row"><div><div class="tag">.t-heading1-emphasized<span class="px">40 / 48 · Bold</span></div></div><div class="sample t-heading1-emphasized">Shape what it says.</div></div>
+<div class="row"><div><div class="tag">.t-heading2-emphasized<span class="px">32 / 40 · Bold · −0.64</span></div></div><div class="sample t-heading2-emphasized">Visibility dashboard</div></div>
+<div class="row"><div><div class="tag">.t-heading3-emphasized<span class="px">24 / 32 · Bold · −0.48</span></div></div><div class="sample t-heading3-emphasized">Your brand in 6 LLMs</div></div>
+<div class="row"><div><div class="tag">.t-heading4-emphasized<span class="px">20 / 24 · SemiBold · +0.2</span></div></div><div class="sample t-heading4-emphasized">Competitor Radar</div></div>
+<div class="row"><div><div class="tag">.t-heading5-emphasized<span class="px">16 / 20 · SemiBold · −0.16</span></div></div><div class="sample t-heading5-emphasized">Recommendations for this week</div></div>
+<div class="row"><div><div class="tag">.t-heading6-emphasized<span class="px">14 / 16 · SemiBold · −0.14</span></div></div><div class="sample t-heading6-emphasized">Top cited sources</div></div>
+
+<div class="grp">Body &amp; caption — Inter</div>
+
+<div class="row"><div><div class="tag">.t-body-regular<span class="px">14 / 20 · Regular</span></div></div><div class="sample t-body-regular">Yolando shows you how six major LLMs answer questions about your brand and the actions that move those answers in your favor.</div></div>
+<div class="row"><div><div class="tag">.t-body-emphasized<span class="px">14 / 20 · Medium</span></div></div><div class="sample t-body-emphasized">Share of voice rose 12 points after your Reddit push last week.</div></div>
+<div class="row"><div><div class="tag">.t-caption-regular<span class="px">12 / 16 · Regular</span></div></div><div class="sample t-caption-regular">Updated 3 min ago · 214 queries tracked</div></div>
+<div class="row"><div><div class="tag">.t-caption-emphasized<span class="px">12 / 16 · SemiBold</span></div></div><div class="sample t-caption-emphasized">NEW · REQUIRES ATTENTION</div></div>
+
+<div class="grp">Button labels — DM Sans</div>
+
+<div class="row"><div><div class="tag">.t-button-xs / .t-button-sm<span class="px">12 / 16 · SemiBold · −0.12</span></div></div><div class="sample t-button-sm">Add source</div></div>
+<div class="row"><div><div class="tag">.t-button-md<span class="px">14 / 20 · SemiBold · −0.14</span></div></div><div class="sample t-button-md">Generate content</div></div>
+<div class="row"><div><div class="tag">.t-button-lg<span class="px">16 / 24 · SemiBold · −0.16</span></div></div><div class="sample t-button-lg">Start tracking</div></div>
+
+</body></html>

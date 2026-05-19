@@ -1,0 +1,255 @@
+/* =========================================================================
+   Yolando tokens — derived from seo_webapp/app/globals.css @ birdseye/main
+   Canonical source. Paste <link rel="stylesheet" href="colors_and_type.css">
+   into any prototype. Semantic tokens (bg-*, content-*, border-*) preferred
+   over primitives.
+   ========================================================================= */
+
+/* Brand-hosted variable fonts */
+@font-face {
+  font-family: 'Inter';
+  src: url('fonts/Inter-VariableFont_opsz_wght.ttf') format('truetype-variations');
+  font-weight: 100 900; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: 'Inter';
+  src: url('fonts/Inter-Italic-VariableFont_opsz_wght.ttf') format('truetype-variations');
+  font-weight: 100 900; font-style: italic; font-display: swap;
+}
+@font-face {
+  font-family: 'DM Sans';
+  src: url('fonts/DMSans-VariableFont_opsz_wght.ttf') format('truetype-variations');
+  font-weight: 100 1000; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: 'DM Sans';
+  src: url('fonts/DMSans-Italic-VariableFont_opsz_wght.ttf') format('truetype-variations');
+  font-weight: 100 1000; font-style: italic; font-display: swap;
+}
+/* Geist Mono from Google (mono only — headings use DM Sans, body uses Inter) */
+@import url('https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500&display=swap');
+
+:root {
+  /* ========== PRIMITIVES ========== */
+
+  /* Greys */
+  --color-grey-50:#f8f8f8; --color-grey-100:#e4e4e4; --color-grey-200:#cbcbcf;
+  --color-grey-300:#a3a3a6; --color-grey-400:#7e7e80; --color-grey-500:#616163;
+  --color-grey-600:#464649; --color-grey-700:#353538; --color-grey-800:#2a292d;
+  --color-grey-900:#201f22; --color-grey-1000:#161518;
+
+  /* Purple — brand primary family (500 = default brand color) */
+  --color-purple-50:#f4f4ff; --color-purple-100:#e5e5ff; --color-purple-200:#c5c4fe;
+  --color-purple-300:#a7a6fe; --color-purple-400:#8583ff; --color-purple-500:#6d65e1;
+  --color-purple-600:#544cca; --color-purple-700:#4540a4; --color-purple-800:#3f3b96;
+  --color-purple-900:#2f2d6d; --color-purple-1000:#1d1c44;
+
+  /* Red · Orange · Yellow · Green · Cyan · Blue · Pink — accent families */
+  --color-red-100:#fee0e0; --color-red-200:#fdb9b9; --color-red-300:#f79292;
+  --color-red-400:#ec6767; --color-red-500:#df3131; --color-red-600:#ba1c1c;
+  --color-red-700:#9b1717;
+  --color-orange-100:#fee2c1; --color-orange-200:#f6c089; --color-orange-300:#ea9e59;
+  --color-orange-400:#ed7e23; --color-orange-500:#c94f0f; --color-orange-700:#8c2f09;
+  --color-yellow-100:#fee8a6; --color-yellow-200:#ffd15f; --color-yellow-300:#f2b621;
+  --color-yellow-400:#bd7e10; --color-yellow-500:#a76909;
+  --color-green-100:#c7f1d8; --color-green-200:#98d7b4; --color-green-300:#6dbf94;
+  --color-green-400:#3ba36e; --color-green-500:#288652; --color-green-700:#135a2e;
+  --color-cyan-100:#bcf0f7; --color-cyan-300:#21bfd9; --color-cyan-500:#048197;
+  --color-blue-100:#d6e8fe; --color-blue-300:#7fb0fa; --color-blue-500:#3471e4;
+  --color-pink-100:#fbdfee; --color-pink-300:#f38fc1; --color-pink-500:#d23880;
+
+  /* Alpha greys for hover/nav states */
+  --color-greyAlpha-50:rgba(97,97,99,.05); --color-greyAlpha-100:rgba(97,97,99,.10);
+  --color-greyAlpha-200:rgba(97,97,99,.20); --color-greyAlpha-300:rgba(97,97,99,.30);
+  --color-greyAlpha-500:rgba(97,97,99,.50);
+  --color-whiteAlpha-100:rgba(255,255,255,.10); --color-whiteAlpha-200:rgba(255,255,255,.20);
+  --color-redAlpha-100:rgba(223,49,49,.10); --color-redAlpha-200:rgba(223,49,49,.20);
+  --color-greenAlpha-100:rgba(40,134,82,.10); --color-greenAlpha-300:rgba(40,134,82,.30);
+  --color-orangeAlpha-100:rgba(201,79,15,.10);
+  --color-blueAlpha-100:rgba(52,113,228,.10);
+  --color-purpleAlpha-50:rgba(134,88,236,.05);
+  --color-purpleAlpha-100:rgba(134,88,236,.10);
+  --color-purpleAlpha-200:rgba(134,88,236,.20);
+  --color-redAlpha-300:rgba(223,49,49,.30);
+
+  /* ========== SPACING (base = 4px, token 100 = 4px) ========== */
+  --spacing-000:0px;  --spacing-050:2px;  --spacing-100:4px;  --spacing-150:6px;
+  --spacing-200:8px;  --spacing-250:10px; --spacing-300:12px; --spacing-400:16px;
+  --spacing-500:20px; --spacing-600:24px; --spacing-700:28px; --spacing-800:32px;
+  --spacing-900:36px; --spacing-1000:40px;--spacing-1200:48px;--spacing-1400:56px;
+  --spacing-1600:64px;--spacing-2000:80px;--spacing-2400:96px;--spacing-3200:128px;
+
+  /* Sizing (for h/w) */
+  --sizing-100:4px;  --sizing-200:8px;  --sizing-300:12px; --sizing-400:16px;
+  --sizing-500:20px; --sizing-600:24px; --sizing-700:28px; --sizing-800:32px;
+  --sizing-900:36px; --sizing-1000:40px;--sizing-1200:48px;--sizing-1400:56px;
+  --sizing-1600:64px;--sizing-1800:72px;--sizing-2000:80px;--sizing-3200:128px;
+
+  /* ========== RADIUS ========== */
+  --borderRadius-none:0;    --borderRadius-50:2px;  --borderRadius-100:4px;
+  --borderRadius-200:8px;   --borderRadius-300:12px;--borderRadius-400:16px;
+  --borderRadius-round:999999px;
+
+  /* ========== BORDER WIDTH ========== */
+  --borderWidth-100:1px; --borderWidth-200:2px; --borderWidth-300:4px;
+
+  /* ========== TYPOGRAPHY ========== */
+  --fontFamily-headings:'DM Sans',sans-serif;
+  --fontFamily-body:'Inter',sans-serif;
+  --font-mono:'Geist Mono',monospace;
+
+  --fontWeight-regular:400; --fontWeight-medium:500;
+  --fontWeight-semibold:600; --fontWeight-bold:700;
+
+  --fontSize-200:8px;  --fontSize-250:10px; --fontSize-300:12px; --fontSize-350:14px;
+  --fontSize-400:16px; --fontSize-450:18px; --fontSize-500:20px; --fontSize-600:24px;
+  --fontSize-700:28px; --fontSize-800:32px; --fontSize-900:36px; --fontSize-1000:40px;
+  --fontSize-1200:48px;--fontSize-1400:56px;--fontSize-1600:64px;
+
+  --lineHeight-300:12px; --lineHeight-350:14px; --lineHeight-400:16px;
+  --lineHeight-500:20px; --lineHeight-600:24px; --lineHeight-800:32px;
+  --lineHeight-1000:40px;--lineHeight-1200:48px;--lineHeight-1600:64px;--lineHeight-1800:72px;
+
+  /* ========== SHADOWS ========== */
+  --shadow-xs:0 1px 2px 0 rgba(0,0,0,.08);
+  --shadow-sm:0 2px 4px 0 rgba(0,0,0,.12);
+  --shadow-md:0 4px 8px -2px rgba(0,0,0,.16);
+  --shadow-lg:0 8px 16px -4px rgba(0,0,0,.16);
+  --shadow-xl:0 12px 32px -8px rgba(0,0,0,.24);
+
+  /* Focus rings: 3px color halo */
+  --focus-default:0 0 0 3px var(--color-greyAlpha-300);
+  --focus-success:0 0 0 3px var(--color-greenAlpha-300);
+  --focus-destructive:0 0 0 3px var(--color-redAlpha-300);
+
+  /* ========== SEMANTIC — LIGHT (default) ========== */
+
+  /* Backgrounds */
+  --bg-brand:       var(--color-purple-500);
+  --bg-default:     #ffffff;
+  --bg-bold:        var(--color-grey-50);
+  --bg-bolder:      var(--color-grey-100);
+  --bg-tooltip:     var(--color-grey-1000);
+  --bg-inverse:     var(--color-grey-1000);
+  --bg-skeleton:    var(--color-greyAlpha-200);
+  --bg-info:        var(--color-blueAlpha-100);
+  --bg-success:     var(--color-greenAlpha-100);
+  --bg-warning:     var(--color-orangeAlpha-100);
+  --bg-destructive: var(--color-redAlpha-100);
+
+  --bg-input-field-default: #ffffff;
+  --bg-input-field-hover:   var(--color-grey-50);
+  --bg-input-field-pressed: var(--color-grey-100);
+
+  --bg-nav-default: transparent;
+  --bg-nav-hover:   var(--color-greyAlpha-100);
+  --bg-nav-active:  var(--color-greyAlpha-200);
+
+  --bg-button-primary-default:      var(--color-purple-500);
+  --bg-button-primary-hover:        var(--color-purple-600);
+  --bg-button-primary-pressed:      var(--color-purple-700);
+  --bg-button-secondary-default:    var(--color-purpleAlpha-50);
+  --bg-button-secondary-hover:      var(--color-purpleAlpha-100);
+  --bg-button-secondary-pressed:    var(--color-purpleAlpha-200);
+  --bg-button-outline-default:      var(--color-grey-50);
+  --bg-button-outline-hover:        var(--color-grey-100);
+  --bg-button-ghost-default:        transparent;
+  --bg-button-ghost-hover:          var(--color-greyAlpha-100);
+  --bg-button-destructive-default:  var(--color-red-500);
+  --bg-button-destructive-hover:    var(--color-red-600);
+  --bg-button-warning-default:      var(--color-orangeAlpha-100);
+  --bg-button-warning-hover:        rgba(201,79,15,.20);
+
+  --bg-card-default: transparent;
+  --bg-card-hover:   var(--color-greyAlpha-50);
+  --bg-card-selected:var(--color-purpleAlpha-100);
+
+  /* Content (text / icons) */
+  --content-brand:      var(--color-purple-500);
+  --content-default:    var(--color-grey-1000);
+  --content-subtle:     var(--color-grey-800);
+  --content-subtler:    var(--color-grey-600);
+  --content-subtlest:   var(--color-grey-400);
+  --content-nav:        var(--color-grey-1000);
+  --content-inverse:    #ffffff;
+  --content-tooltip:    #ffffff;
+  --content-destructive:var(--color-red-500);
+  --content-success:    var(--color-green-500);
+  --content-info:       var(--color-blue-500);
+  --content-warning:    var(--color-orange-500);
+  --content-button-primary:     #ffffff;
+  --content-button-secondary:   var(--color-purple-500);
+  --content-button-outline:     var(--color-grey-900);
+  --content-button-ghost:       var(--color-grey-900);
+  --content-button-destructive: #ffffff;
+  --content-button-primary-link:var(--color-purple-500);
+
+  /* Borders */
+  --border-brand:          var(--color-purple-500);
+  --border-subtle:         var(--color-grey-100);
+  --border-default:        var(--color-grey-200);
+  --border-bold:           var(--color-grey-300);
+  --border-focus:          var(--color-greyAlpha-200);
+  --border-input:          var(--color-grey-200);
+  --border-card:           var(--color-grey-200);
+  --border-selector:       var(--color-grey-200);
+  --border-selector-selected: var(--color-purple-500);
+  --border-button-secondary: var(--color-purple-500);
+  --border-button-outline:   var(--color-grey-200);
+  --border-destructive-subtle: var(--color-red-200);
+  --border-destructive-bold:   var(--color-red-500);
+  --border-warning-subtle:     var(--color-orange-200);
+  --border-info-subtle:        var(--color-blue-300);
+  --border-success-subtle:     var(--color-green-200);
+}
+
+/* ========== DARK MODE ========== */
+.dark {
+  --bg-brand:       var(--color-purple-300);
+  --bg-default:     var(--color-grey-1000);
+  --bg-bold:        var(--color-grey-900);
+  --bg-bolder:      var(--color-grey-800);
+  --bg-inverse:     #ffffff;
+
+  --bg-button-primary-default: var(--color-purple-300);
+  --bg-button-primary-hover:   var(--color-purple-200);
+  --bg-button-outline-default: transparent;
+  --bg-button-outline-hover:   var(--color-whiteAlpha-50, rgba(255,255,255,.04));
+  --bg-button-secondary-default: var(--color-purpleAlpha-100);
+  --bg-button-secondary-hover:   var(--color-purpleAlpha-200);
+  --bg-button-ghost-hover:       var(--color-whiteAlpha-50, rgba(255,255,255,.04));
+
+  --content-brand:    var(--color-purple-300);
+  --content-default:  #ffffff;
+  --content-subtle:   var(--color-grey-100);
+  --content-subtler:  var(--color-grey-200);
+  --content-subtlest: var(--color-grey-300);
+  --content-inverse:  var(--color-grey-1000);
+  --content-button-primary: #000000; /* dark text on lavender */
+  --content-button-outline: var(--color-grey-100);
+  --content-button-ghost:   var(--color-grey-100);
+
+  --border-subtle:  var(--color-grey-800);
+  --border-default: var(--color-grey-700);
+  --border-bold:    var(--color-grey-600);
+  --border-card:    var(--color-grey-800);
+  --border-input:   var(--color-grey-800);
+  --border-button-outline: var(--color-grey-700);
+}
+
+/* ========== COMPOSED TEXT STYLES ========== */
+
+.t-display-emphasized   { font-family:var(--fontFamily-headings); font-size:var(--fontSize-1200); font-weight:var(--fontWeight-semibold); line-height:var(--lineHeight-1600); }
+.t-heading1-emphasized  { font-family:var(--fontFamily-headings); font-size:var(--fontSize-1000); font-weight:var(--fontWeight-bold);     line-height:var(--lineHeight-1200); }
+.t-heading2-emphasized  { font-family:var(--fontFamily-headings); font-size:var(--fontSize-800);  font-weight:var(--fontWeight-bold);     line-height:var(--lineHeight-1000); letter-spacing:-.64px; }
+.t-heading3-emphasized  { font-family:var(--fontFamily-headings); font-size:var(--fontSize-600);  font-weight:var(--fontWeight-bold);     line-height:var(--lineHeight-800);  letter-spacing:-.48px; }
+.t-heading4-emphasized  { font-family:var(--fontFamily-headings); font-size:var(--fontSize-500);  font-weight:var(--fontWeight-semibold); line-height:var(--lineHeight-600);  letter-spacing:.2px; }
+.t-heading5-emphasized  { font-family:var(--fontFamily-headings); font-size:var(--fontSize-400);  font-weight:var(--fontWeight-semibold); line-height:var(--lineHeight-500);  letter-spacing:-.16px; }
+.t-heading6-emphasized  { font-family:var(--fontFamily-headings); font-size:var(--fontSize-350);  font-weight:var(--fontWeight-semibold); line-height:var(--lineHeight-400);  letter-spacing:-.14px; }
+.t-body-regular         { font-family:var(--fontFamily-body);     font-size:var(--fontSize-350);  font-weight:var(--fontWeight-regular);  line-height:var(--lineHeight-500); }
+.t-body-emphasized      { font-family:var(--fontFamily-body);     font-size:var(--fontSize-350);  font-weight:var(--fontWeight-medium);   line-height:var(--lineHeight-500); }
+.t-caption-regular      { font-family:var(--fontFamily-body);     font-size:var(--fontSize-300);  font-weight:var(--fontWeight-regular);  line-height:var(--lineHeight-400); }
+.t-caption-emphasized   { font-family:var(--fontFamily-body);     font-size:var(--fontSize-300);  font-weight:var(--fontWeight-semibold); line-height:var(--lineHeight-400); }
+.t-button-xs, .t-button-sm { font-family:var(--fontFamily-headings); font-size:var(--fontSize-300); font-weight:var(--fontWeight-semibold); line-height:var(--lineHeight-400); letter-spacing:-.12px; }
+.t-button-md            { font-family:var(--fontFamily-headings); font-size:var(--fontSize-350);  font-weight:var(--fontWeight-semibold); line-height:var(--lineHeight-500); letter-spacing:-.14px; }
+.t-button-lg            { font-family:var(--fontFamily-headings); font-size:var(--fontSize-400);  font-weight:var(--fontWeight-semibold); line-height:var(--lineHeight-600); letter-spacing:-.16px; }

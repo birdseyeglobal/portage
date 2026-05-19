@@ -1,0 +1,90 @@
+<!doctype html><html><head><meta charset="utf-8">
+<title>Colors — Brand (purple)</title>
+<link rel="stylesheet" href="_base.css">
+<style>
+  body { padding: 24px; display: flex; flex-direction: column; gap: 20px; }
+  .head { display:flex; justify-content:space-between; align-items:baseline; }
+  .head h1 { font-family: var(--fontFamily-headings); font-weight:700; font-size:18px; letter-spacing:-0.16px; }
+  .ramp { display:grid; grid-template-columns: repeat(11, 1fr); border:1px solid var(--color-grey-200); border-radius: 12px; overflow:hidden; }
+  .ramp .stop { aspect-ratio: 1/1.25; display:flex; flex-direction:column; justify-content:flex-end; padding:8px 6px; gap:2px; border-right:1px solid rgba(255,255,255,.12); }
+  .ramp .stop:last-child { border-right:0; }
+  .ramp .stop .n { font-family: var(--font-mono); font-size:10px; line-height:12px; }
+  .ramp .stop .h { font-family: var(--font-mono); font-size:9px; line-height:12px; opacity:.8; text-transform:uppercase; }
+  .hero { display:grid; grid-template-columns: 1.4fr 1fr; gap:12px; }
+  .hero .lg { border-radius:12px; padding:20px; display:flex; flex-direction:column; justify-content:space-between; min-height:160px; }
+  .hero .lg .tag { font-family: var(--fontFamily-headings); font-weight:600; font-size:11px; letter-spacing:0.12em; text-transform:uppercase; opacity:.9; }
+  .hero .lg .v { font-family: var(--fontFamily-headings); font-weight:700; font-size:28px; letter-spacing:-0.48px; line-height:32px; }
+  .hero .lg .m { font-family: var(--font-mono); font-size:11px; opacity:.8; }
+  .side { display:flex; flex-direction:column; gap:10px; }
+  .side .card { border:1px solid var(--color-grey-200); border-radius:12px; padding:14px; display:flex; gap:10px; align-items:center; }
+  .side .sw { width:36px; height:36px; border-radius:8px; flex:none; }
+  .side .t { flex:1; min-width:0; }
+  .side .t .l { font-family: var(--fontFamily-headings); font-weight:600; font-size:13px; color:var(--color-grey-1000); letter-spacing:-0.14px; }
+  .side .t .s { font-family: var(--fontFamily-body); font-size:12px; color:var(--color-grey-500); line-height:16px; margin-top:2px; }
+  .alpha { display:grid; grid-template-columns: repeat(5, 1fr); gap:6px; }
+  .alpha .a { height:52px; border-radius:8px; display:flex; align-items:flex-end; padding:6px 8px; font-family: var(--font-mono); font-size:10px; color: var(--color-grey-1000); }
+  .alpha .a.on-dark { color:#fff; background:var(--color-grey-1000); position:relative; }
+  .alpha .a.on-dark::before { content:''; position:absolute; inset:0; border-radius:8px; }
+</style>
+</head>
+<body>
+
+<div class="head">
+  <h1>Purple — brand / primary</h1>
+  <div class="mono">--color-purple-{50…1000}</div>
+</div>
+
+<div class="ramp">
+  <div class="stop" style="background:#f4f4ff;color:#1d1c44"><div class="n">50</div><div class="h">#f4f4ff</div></div>
+  <div class="stop" style="background:#e5e5ff;color:#1d1c44"><div class="n">100</div><div class="h">#e5e5ff</div></div>
+  <div class="stop" style="background:#c5c4fe;color:#1d1c44"><div class="n">200</div><div class="h">#c5c4fe</div></div>
+  <div class="stop" style="background:#a7a6fe;color:#1d1c44"><div class="n">300</div><div class="h">#a7a6fe</div></div>
+  <div class="stop" style="background:#8583ff;color:#fff"><div class="n">400</div><div class="h">#8583ff</div></div>
+  <div class="stop" style="background:#6d65e1;color:#fff"><div class="n">500</div><div class="h">#6d65e1</div></div>
+  <div class="stop" style="background:#544cca;color:#fff"><div class="n">600</div><div class="h">#544cca</div></div>
+  <div class="stop" style="background:#4540a4;color:#fff"><div class="n">700</div><div class="h">#4540a4</div></div>
+  <div class="stop" style="background:#3f3b96;color:#fff"><div class="n">800</div><div class="h">#3f3b96</div></div>
+  <div class="stop" style="background:#2f2d6d;color:#fff"><div class="n">900</div><div class="h">#2f2d6d</div></div>
+  <div class="stop" style="background:#1d1c44;color:#fff"><div class="n">1000</div><div class="h">#1d1c44</div></div>
+</div>
+
+<div class="hero">
+  <div class="lg" style="background:#6d65e1;color:#fff">
+    <div class="tag">Primary · Light mode</div>
+    <div>
+      <div class="v">purple-500</div>
+      <div class="m">#6d65e1 · bg-brand · bg-button-primary-default · content-brand</div>
+    </div>
+  </div>
+  <div class="lg" style="background:#161518;color:#fff;border:1px solid #2a292d">
+    <div class="tag" style="color:#a7a6fe">Primary · Dark mode</div>
+    <div>
+      <div class="v" style="color:#a7a6fe">purple-300</div>
+      <div class="m">#a7a6fe · bg-brand (dark) · button text: black</div>
+    </div>
+  </div>
+</div>
+
+<div>
+  <div class="eyebrow" style="margin-bottom:8px">Semantic uses</div>
+  <div class="side">
+    <div class="card"><div class="sw" style="background:#6d65e1"></div><div class="t"><div class="l">purple-500 — primary button · bg-brand · content-brand</div><div class="s">Used on all primary CTAs, selected states, links, indicator-active-highlight.</div></div></div>
+    <div class="card"><div class="sw" style="background:#544cca"></div><div class="t"><div class="l">purple-600 — primary hover (light)</div><div class="s">Button hover. Never use as a surface color.</div></div></div>
+    <div class="card"><div class="sw" style="background:#a7a6fe"></div><div class="t"><div class="l">purple-300 — dark-mode primary</div><div class="s">`bg-button-primary-default` in dark; paired with black text. Also legacy "lavender".</div></div></div>
+    <div class="card"><div class="sw" style="background:#e5e5ff;border:1px solid var(--color-grey-200)"></div><div class="t"><div class="l">purple-100 — muted purple surface</div><div class="s">Legacy token `--purple-subtle`. Use `bg-accent-purple-subtle` in new code.</div></div></div>
+  </div>
+</div>
+
+<div>
+  <div class="eyebrow" style="margin-bottom:8px">purpleAlpha — for selection & hover tints</div>
+  <div class="alpha">
+    <div class="a" style="background:rgba(134,88,236,.05);">purpleAlpha-50</div>
+    <div class="a" style="background:rgba(134,88,236,.10);">purpleAlpha-100</div>
+    <div class="a" style="background:rgba(134,88,236,.20);">purpleAlpha-200</div>
+    <div class="a" style="background:rgba(134,88,236,.30);">purpleAlpha-300</div>
+    <div class="a" style="background:rgba(134,88,236,.50);">purpleAlpha-500</div>
+  </div>
+  <div class="sub" style="margin-top:6px">Base: <span class="mono">#8658ec</span>. Used for <span class="mono">bg-button-secondary-*</span>, <span class="mono">bg-card-selected</span>.</div>
+</div>
+
+</body></html>

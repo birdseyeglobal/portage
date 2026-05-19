@@ -12,6 +12,10 @@
     {
       "name": "prose",
       "source": "./plugins/prose"
+    },
+    {
+      "name": "styleguide",
+      "source": "./plugins/styleguide"
     }
   ]
 }

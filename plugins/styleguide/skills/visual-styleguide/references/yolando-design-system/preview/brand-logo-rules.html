@@ -1,0 +1,30 @@
+<!doctype html><html><head><meta charset="utf-8">
+<title>Logo — rules</title><link rel="stylesheet" href="_base.css">
+<style>
+  body{padding:24px;display:flex;flex-direction:column;gap:18px}
+  .stage{border:1px solid var(--border-subtle);border-radius:var(--borderRadius-300);padding:18px;background:var(--color-grey-50);position:relative;display:flex;align-items:center;justify-content:center;height:140px}
+  .stage img{height:56px;position:relative;z-index:2}
+  .bounds{position:absolute;inset:24px;border:1px dashed var(--color-purple-200);border-radius:6px}
+  .measure{position:absolute;font-family:var(--font-mono);font-size:10px;color:var(--color-purple-500)}
+  .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+  .don{border:1px solid var(--border-subtle);border-radius:var(--borderRadius-300);height:110px;display:flex;align-items:center;justify-content:center;background:#fff;position:relative;overflow:hidden}
+  .don img{height:36px}
+  .x{position:absolute;top:8px;right:8px;width:18px;height:18px;border-radius:99px;background:var(--color-red-500);color:#fff;font-size:11px;display:flex;align-items:center;justify-content:center;font-family:var(--fontFamily-headings);font-weight:var(--fontWeight-bold)}
+  .check{position:absolute;top:8px;right:8px;width:18px;height:18px;border-radius:99px;background:var(--color-green-500);color:#fff;font-family:var(--fontFamily-headings);font-weight:var(--fontWeight-bold);font-size:11px;display:flex;align-items:center;justify-content:center}
+  .cap{position:absolute;bottom:8px;left:10px;right:10px;font-family:var(--fontFamily-body);font-size:11px;color:var(--color-grey-500)}
+</style></head><body>
+<div class="eyebrow">Clear space · min padding = 24px on all sides</div>
+<div class="stage">
+  <div class="bounds"></div>
+  <span class="measure" style="top:6px;left:12px">24px padding on all sides</span>
+  <img src="../assets/yolando-full-dark.svg" alt="">
+</div>
+
+<div class="eyebrow">Don't</div>
+<div class="grid">
+  <div class="don"><img src="../assets/yolando-full-dark.svg" style="transform:skewX(-10deg)"><span class="x">✕</span><span class="cap">Skew or stretch</span></div>
+  <div class="don" style="background:var(--color-orange-300)"><img src="../assets/yolando-full-dark.svg"><span class="x">✕</span><span class="cap">Clash with peach</span></div>
+  <div class="don"><img src="../assets/yolando-full-dark.svg" style="filter:hue-rotate(120deg)"><span class="x">✕</span><span class="cap">Recolor the pin</span></div>
+  <div class="don"><img src="../assets/yolando-icon-dark.svg" style="height:28px"><span class="check">✓</span><span class="cap">Use icon ≥ 16px</span></div>
+</div>
+</body></html>

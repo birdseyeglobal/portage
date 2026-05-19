@@ -1,0 +1,139 @@
+<!doctype html><html><head><meta charset="utf-8">
+<title>Colors — Semantic tokens</title>
+<link rel="stylesheet" href="_base.css">
+<style>
+  body { padding:24px; display:flex; flex-direction:column; gap:18px; }
+  .head { display:flex; justify-content:space-between; align-items:baseline; }
+  .head h1 { font-family:var(--fontFamily-headings); font-weight:700; font-size:18px; letter-spacing:-0.16px; }
+  .twin { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .panel { border:1px solid var(--color-grey-200); border-radius:12px; overflow:hidden; }
+  .panel .hdr { padding:12px 14px; display:flex; justify-content:space-between; align-items:baseline; background:var(--color-grey-50); border-bottom:1px solid var(--color-grey-200); font-family:var(--fontFamily-headings); font-weight:600; font-size:13px; }
+  .panel.dark { background:#161518; border-color:#2a292d; color:#fff; }
+  .panel.dark .hdr { background:#201f22; border-color:#2a292d; color:#fff; }
+  .panel .hdr .mono { font-family:var(--font-mono); font-size:10px; color:var(--color-grey-500); text-transform:uppercase; font-weight:400; }
+  .panel.dark .hdr .mono { color:#a3a3a6; }
+  .panel .body { padding:12px; display:flex; flex-direction:column; gap:6px; }
+  .row { display:flex; align-items:center; gap:10px; padding:6px 4px; }
+  .row .sw { width:26px; height:26px; border-radius:6px; flex:none; border:1px solid rgba(0,0,0,.08); }
+  .panel.dark .row .sw { border-color:rgba(255,255,255,.12); }
+  .row .l { font-family:var(--font-mono); font-size:11px; color:var(--color-grey-1000); flex:1; min-width:0; }
+  .panel.dark .row .l { color:#fff; }
+  .row .k { font-family:var(--font-mono); font-size:10px; color:var(--color-grey-500); text-transform:uppercase; }
+  .panel.dark .row .k { color:#a3a3a6; }
+  .sep { height:1px; background:var(--color-grey-100); margin:4px 0; }
+  .panel.dark .sep { background:#2a292d; }
+  .grp { font-family:var(--fontFamily-headings); font-weight:600; font-size:10px; text-transform:uppercase; letter-spacing:0.12em; color:var(--color-grey-400); margin:6px 4px 2px; }
+  .panel.dark .grp { color:#7e7e80; }
+  .demo { border:1px dashed var(--color-grey-300); border-radius:12px; padding:16px; display:grid; grid-template-columns: 1fr 1fr; gap:12px; }
+  .demo .cell { padding:12px; border-radius:10px; border:1px solid var(--color-grey-200); background:#fff; display:flex; flex-direction:column; gap:8px; }
+  .demo .cell .t { font-family:var(--fontFamily-headings); font-weight:600; font-size:13px; color:var(--color-grey-1000); letter-spacing:-0.14px; }
+  .demo .cell .t.i { color:#3471e4; }
+  .demo .cell .t.s { color:#288652; }
+  .demo .cell .t.w { color:#c94f0f; }
+  .demo .cell .t.d { color:#df3131; }
+  .demo .cell .s { font-family:var(--fontFamily-body); font-size:12px; line-height:16px; color:var(--color-grey-600); }
+</style>
+</head>
+<body>
+
+<div class="head">
+  <h1>Semantic tokens — bg / content / border</h1>
+  <div class="mono">three namespaces · swap cleanly between themes</div>
+</div>
+
+<div class="twin">
+  <!-- LIGHT -->
+  <div class="panel">
+    <div class="hdr"><div>Light mode</div><div class="mono">:root</div></div>
+    <div class="body">
+      <div class="grp">Backgrounds</div>
+      <div class="row"><div class="sw" style="background:#6d65e1"></div><div class="l">bg-brand</div><div class="k">purple-500</div></div>
+      <div class="row"><div class="sw" style="background:#ffffff"></div><div class="l">bg-default</div><div class="k">white</div></div>
+      <div class="row"><div class="sw" style="background:#f8f8f8"></div><div class="l">bg-bold</div><div class="k">grey-50</div></div>
+      <div class="row"><div class="sw" style="background:#e4e4e4"></div><div class="l">bg-bolder</div><div class="k">grey-100</div></div>
+      <div class="row"><div class="sw" style="background:#161518"></div><div class="l">bg-inverse</div><div class="k">grey-1000</div></div>
+      <div class="row"><div class="sw" style="background:rgba(97,97,99,.20)"></div><div class="l">bg-skeleton · bg-tab</div><div class="k">greyAlpha-200</div></div>
+      <div class="sep"></div>
+      <div class="grp">State surfaces</div>
+      <div class="row"><div class="sw" style="background:rgba(223,49,49,.10)"></div><div class="l">bg-destructive</div><div class="k">redAlpha-100</div></div>
+      <div class="row"><div class="sw" style="background:rgba(201,79,15,.10)"></div><div class="l">bg-warning</div><div class="k">orangeAlpha-100</div></div>
+      <div class="row"><div class="sw" style="background:rgba(40,134,82,.10)"></div><div class="l">bg-success</div><div class="k">greenAlpha-100</div></div>
+      <div class="row"><div class="sw" style="background:rgba(52,113,228,.10)"></div><div class="l">bg-info</div><div class="k">blueAlpha-100</div></div>
+      <div class="sep"></div>
+      <div class="grp">Content</div>
+      <div class="row"><div class="sw" style="background:#161518"></div><div class="l">content-default</div><div class="k">grey-1000</div></div>
+      <div class="row"><div class="sw" style="background:#2a292d"></div><div class="l">content-subtle</div><div class="k">grey-800</div></div>
+      <div class="row"><div class="sw" style="background:#464649"></div><div class="l">content-subtler</div><div class="k">grey-600</div></div>
+      <div class="row"><div class="sw" style="background:#7e7e80"></div><div class="l">content-subtlest</div><div class="k">grey-400</div></div>
+      <div class="row"><div class="sw" style="background:#6d65e1"></div><div class="l">content-brand</div><div class="k">purple-500</div></div>
+      <div class="row"><div class="sw" style="background:#df3131"></div><div class="l">content-destructive</div><div class="k">red-500</div></div>
+      <div class="row"><div class="sw" style="background:#288652"></div><div class="l">content-success</div><div class="k">green-500</div></div>
+      <div class="row"><div class="sw" style="background:#c94f0f"></div><div class="l">content-warning</div><div class="k">orange-500</div></div>
+      <div class="sep"></div>
+      <div class="grp">Borders</div>
+      <div class="row"><div class="sw" style="background:#e4e4e4"></div><div class="l">border-subtle</div><div class="k">grey-100</div></div>
+      <div class="row"><div class="sw" style="background:#cbcbcf"></div><div class="l">border-default · border-card · border-input</div><div class="k">grey-200</div></div>
+      <div class="row"><div class="sw" style="background:#a3a3a6"></div><div class="l">border-bold</div><div class="k">grey-300</div></div>
+      <div class="row"><div class="sw" style="background:#6d65e1"></div><div class="l">border-brand · border-selector-selected</div><div class="k">purple-500</div></div>
+    </div>
+  </div>
+  <!-- DARK -->
+  <div class="panel dark">
+    <div class="hdr"><div>Dark mode</div><div class="mono">.dark</div></div>
+    <div class="body">
+      <div class="grp">Backgrounds</div>
+      <div class="row"><div class="sw" style="background:#a7a6fe"></div><div class="l">bg-brand</div><div class="k">purple-300</div></div>
+      <div class="row"><div class="sw" style="background:#161518"></div><div class="l">bg-default</div><div class="k">grey-1000</div></div>
+      <div class="row"><div class="sw" style="background:#201f22"></div><div class="l">bg-bold</div><div class="k">grey-900</div></div>
+      <div class="row"><div class="sw" style="background:#2a292d"></div><div class="l">bg-bolder</div><div class="k">grey-800</div></div>
+      <div class="row"><div class="sw" style="background:#ffffff"></div><div class="l">bg-inverse</div><div class="k">white</div></div>
+      <div class="row"><div class="sw" style="background:rgba(97,97,99,.30)"></div><div class="l">bg-skeleton · bg-tab</div><div class="k">greyAlpha-300</div></div>
+      <div class="sep"></div>
+      <div class="grp">State surfaces</div>
+      <div class="row"><div class="sw" style="background:rgba(223,49,49,.20)"></div><div class="l">bg-destructive</div><div class="k">redAlpha-200</div></div>
+      <div class="row"><div class="sw" style="background:rgba(201,79,15,.20)"></div><div class="l">bg-warning</div><div class="k">orangeAlpha-200</div></div>
+      <div class="row"><div class="sw" style="background:rgba(40,134,82,.20)"></div><div class="l">bg-success</div><div class="k">greenAlpha-200</div></div>
+      <div class="row"><div class="sw" style="background:rgba(52,113,228,.20)"></div><div class="l">bg-info</div><div class="k">blueAlpha-200</div></div>
+      <div class="sep"></div>
+      <div class="grp">Content</div>
+      <div class="row"><div class="sw" style="background:#ffffff"></div><div class="l">content-default</div><div class="k">white</div></div>
+      <div class="row"><div class="sw" style="background:#e4e4e4"></div><div class="l">content-subtle</div><div class="k">grey-100</div></div>
+      <div class="row"><div class="sw" style="background:#cbcbcf"></div><div class="l">content-subtler</div><div class="k">grey-200</div></div>
+      <div class="row"><div class="sw" style="background:#a3a3a6"></div><div class="l">content-subtlest</div><div class="k">grey-300</div></div>
+      <div class="row"><div class="sw" style="background:#a7a6fe"></div><div class="l">content-brand</div><div class="k">purple-300</div></div>
+      <div class="row"><div class="sw" style="background:#ec6767"></div><div class="l">content-destructive</div><div class="k">red-400</div></div>
+      <div class="row"><div class="sw" style="background:#3ba36e"></div><div class="l">content-success</div><div class="k">green-400</div></div>
+      <div class="row"><div class="sw" style="background:#ea9e59"></div><div class="l">content-warning</div><div class="k">orange-300</div></div>
+      <div class="sep"></div>
+      <div class="grp">Borders</div>
+      <div class="row"><div class="sw" style="background:#2a292d"></div><div class="l">border-subtle</div><div class="k">grey-800</div></div>
+      <div class="row"><div class="sw" style="background:#353538"></div><div class="l">border-default</div><div class="k">grey-700</div></div>
+      <div class="row"><div class="sw" style="background:#464649"></div><div class="l">border-bold · border-card</div><div class="k">grey-600</div></div>
+      <div class="row"><div class="sw" style="background:#a7a6fe"></div><div class="l">border-brand · border-selector-selected</div><div class="k">purple-300</div></div>
+    </div>
+  </div>
+</div>
+
+<div>
+  <div class="eyebrow" style="margin-bottom:8px">Alert surfaces — semantic in action</div>
+  <div class="demo">
+    <div class="cell" style="background:rgba(52,113,228,.10); border-color:#7fb0fa;">
+      <div class="t i">Info</div>
+      <div class="s">Queries refreshed 3 minutes ago.</div>
+    </div>
+    <div class="cell" style="background:rgba(40,134,82,.10); border-color:#98d7b4;">
+      <div class="t s">Success</div>
+      <div class="s">Visibility score is up 7 pts this week.</div>
+    </div>
+    <div class="cell" style="background:rgba(201,79,15,.10); border-color:#f6c089;">
+      <div class="t w">Warning</div>
+      <div class="s">2 competitors started ranking for your top query.</div>
+    </div>
+    <div class="cell" style="background:rgba(223,49,49,.10); border-color:#fdb9b9;">
+      <div class="t d">Destructive</div>
+      <div class="s">Source removed. 14 citations are now unverified.</div>
+    </div>
+  </div>
+</div>
+
+</body></html>

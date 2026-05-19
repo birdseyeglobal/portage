@@ -1,0 +1,125 @@
+<!doctype html><html><head><meta charset="utf-8">
+<title>Components — Badges</title>
+<link rel="stylesheet" href="_base.css">
+<style>
+  body { padding:24px; display:flex; flex-direction:column; gap:12px; }
+  .head h1 { font-family:var(--fontFamily-headings); font-weight:700; font-size:18px; letter-spacing:-0.16px; }
+  .head .s { font-family:var(--fontFamily-body); font-size:12px; color:var(--color-grey-600); margin-top:4px; }
+  .grp { font-family:var(--fontFamily-headings); font-weight:600; font-size:10px; text-transform:uppercase; letter-spacing:0.12em; color:var(--color-grey-400); margin-top:4px; }
+  .row { display:flex; gap:8px; flex-wrap:wrap; align-items:center; padding-top:4px; }
+
+  /* Repo spec: font-body medium, text-300 (12px), leading-none, px-200 py-100, gap-100, rounded-200 (8px), h-500 (20px) */
+  .badge {
+    font-family: var(--fontFamily-body); font-weight:500;
+    font-size:12px; line-height:1;
+    height:20px; padding:0 8px; gap:4px;
+    border-radius:8px;
+    display:inline-flex; align-items:center;
+    border:1px solid transparent;
+  }
+  .dot { width:6px; height:6px; border-radius:99px; background:currentColor; }
+
+  /* Core variants */
+  .v-primary   { background:var(--bg-brand); color:var(--content-button-primary); }
+  .v-secondary { background:var(--bg-bold); color:var(--content-subtle); }
+  .v-outline   { background:var(--bg-button-outline-default); color:var(--content-button-outline); border-color:var(--border-button-outline); }
+
+  /* Accent scales */
+  .a-grey.s    { background:var(--color-grey-100);    color:var(--color-grey-700); }
+  .a-grey.b    { background:var(--color-grey-300);    color:var(--color-grey-900); }
+  .a-grey.x    { background:var(--color-grey-500);    color:#fff; }
+  .a-red.s     { background:var(--color-red-100);     color:var(--color-red-700); }
+  .a-red.b     { background:var(--color-red-300);     color:var(--color-red-900, #6c1010); }
+  .a-red.x     { background:var(--color-red-500);     color:#fff; }
+  .a-orange.s  { background:var(--color-orange-100);  color:var(--color-orange-700); }
+  .a-orange.b  { background:var(--color-orange-300);  color:#612106; }
+  .a-orange.x  { background:var(--color-orange-400);  color:#fff; }
+  .a-yellow.s  { background:var(--color-yellow-100);  color:#774905; }
+  .a-yellow.b  { background:var(--color-yellow-300);  color:#492c03; }
+  .a-yellow.x  { background:var(--color-yellow-300);  color:#fff; }
+  .a-green.s   { background:var(--color-green-100);   color:var(--color-green-700); }
+  .a-green.b   { background:var(--color-green-300);   color:#0d3d20; }
+  .a-green.x   { background:var(--color-green-500);   color:#fff; }
+  .a-cyan.s    { background:var(--color-cyan-100);    color:#035665; }
+  .a-cyan.b    { background:var(--color-cyan-300);    color:#023b45; }
+  .a-cyan.x    { background:var(--color-cyan-500);    color:#fff; }
+  .a-blue.s    { background:var(--color-blue-100);    color:#2043b3; }
+  .a-blue.b    { background:var(--color-blue-300);    color:#162e7d; }
+  .a-blue.x    { background:var(--color-blue-500);    color:#fff; }
+  .a-purple.s  { background:var(--color-purple-100);  color:var(--color-purple-700); }
+  .a-purple.b  { background:var(--color-purple-300);  color:var(--color-purple-900); }
+  .a-purple.x  { background:var(--color-purple-500);  color:#fff; }
+  .a-pink.s    { background:var(--color-pink-100);    color:#97164a; }
+  .a-pink.b    { background:var(--color-pink-300);    color:#690f34; }
+  .a-pink.x    { background:var(--color-pink-500);    color:#fff; }
+
+  table.mx { border-collapse:separate; border-spacing:6px 6px; font-family:var(--fontFamily-body); font-size:11px; }
+  table.mx th { text-align:left; font-weight:500; color:var(--color-grey-500); text-transform:uppercase; letter-spacing:.1em; font-size:9px; padding:0 6px; }
+  table.mx td.l { color:var(--color-grey-600); font-size:11px; padding-right:4px; }
+
+  .counter { min-width:20px; justify-content:center; padding:0 6px; font-variant-numeric:tabular-nums; font-weight:600; }
+
+  .tag {
+    font-family: var(--fontFamily-body); font-size:12px; line-height:16px;
+    padding:3px 8px; border:1px solid var(--border-default); border-radius:4px;
+    background:#fff; color:var(--color-grey-600);
+    display:inline-flex; gap:6px; align-items:center;
+  }
+  .tag .x { color:var(--color-grey-300); cursor:pointer; }
+</style>
+</head>
+<body>
+
+<div class="head">
+  <h1>Badges &amp; tags</h1>
+  <div class="s">h 20 · <code>rounded-200</code> · Inter Medium 12/12. 3 core variants + 9 accents × 3 weights (subtle / bold / boldest).</div>
+</div>
+
+<div class="grp">Core variants</div>
+<div class="row">
+  <span class="badge v-primary">Primary</span>
+  <span class="badge v-secondary">Secondary</span>
+  <span class="badge v-outline">Outline</span>
+</div>
+
+<div class="grp">Accent matrix · subtle / bold / boldest</div>
+<table class="mx">
+  <tr><th></th><th>subtle</th><th>bold</th><th>boldest</th></tr>
+  <tr><td class="l">grey</td>  <td><span class="badge a-grey s">Grey</span></td>  <td><span class="badge a-grey b">Grey</span></td>  <td><span class="badge a-grey x">Grey</span></td></tr>
+  <tr><td class="l">red</td>   <td><span class="badge a-red s">Failing</span></td><td><span class="badge a-red b">Failing</span></td><td><span class="badge a-red x">Failing</span></td></tr>
+  <tr><td class="l">orange</td><td><span class="badge a-orange s">Warn</span></td><td><span class="badge a-orange b">Warn</span></td><td><span class="badge a-orange x">Warn</span></td></tr>
+  <tr><td class="l">yellow</td><td><span class="badge a-yellow s">Review</span></td><td><span class="badge a-yellow b">Review</span></td><td><span class="badge a-yellow x">Review</span></td></tr>
+  <tr><td class="l">green</td> <td><span class="badge a-green s">Live</span></td> <td><span class="badge a-green b">Live</span></td> <td><span class="badge a-green x">Live</span></td></tr>
+  <tr><td class="l">cyan</td>  <td><span class="badge a-cyan s">Cyan</span></td>  <td><span class="badge a-cyan b">Cyan</span></td>  <td><span class="badge a-cyan x">Cyan</span></td></tr>
+  <tr><td class="l">blue</td>  <td><span class="badge a-blue s">Draft</span></td> <td><span class="badge a-blue b">Draft</span></td> <td><span class="badge a-blue x">Draft</span></td></tr>
+  <tr><td class="l">purple</td><td><span class="badge a-purple s">Brand</span></td><td><span class="badge a-purple b">Brand</span></td><td><span class="badge a-purple x">Brand</span></td></tr>
+  <tr><td class="l">pink</td>  <td><span class="badge a-pink s">Pink</span></td>  <td><span class="badge a-pink b">Pink</span></td>  <td><span class="badge a-pink x">Pink</span></td></tr>
+</table>
+
+<div class="grp">Status dots</div>
+<div class="row">
+  <span class="badge a-green s"><span class="dot"></span>Live</span>
+  <span class="badge a-blue s"><span class="dot"></span>Drafting</span>
+  <span class="badge a-orange s"><span class="dot"></span>Attention</span>
+  <span class="badge a-red s"><span class="dot"></span>Failing</span>
+  <span class="badge a-grey s"><span class="dot"></span>Paused</span>
+</div>
+
+<div class="grp">Counters</div>
+<div class="row">
+  <span class="badge v-primary counter">12</span>
+  <span class="badge a-grey x counter">8</span>
+  <span class="badge a-red x counter">3</span>
+  <span class="badge a-grey s counter">142</span>
+</div>
+
+<div class="grp">Filter tags · <code>rounded-100</code></div>
+<div class="row">
+  <span class="tag">fintech</span>
+  <span class="tag">#GEO</span>
+  <span class="tag">ChatGPT</span>
+  <span class="tag">Perplexity <svg class="x" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></span>
+  <span class="tag" style="color:var(--color-purple-500); border-color:var(--color-purple-200); background:rgba(134,88,236,.05)">+ Add tag</span>
+</div>
+
+</body></html>

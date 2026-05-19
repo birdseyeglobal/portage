@@ -1,0 +1,66 @@
+/* Preview card base. All cards are 700×H, <link rel="stylesheet" href="_base.css">
+   pulls in fonts + canonical tokens from ../colors_and_type.css */
+@import url('../colors_and_type.css');
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body {
+  width: 700px;
+  font-family: var(--fontFamily-body);
+  background: #ffffff;
+  color: var(--color-grey-1000);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+body { padding: 24px; }
+
+/* Dark preview wrapper — cards that need to show the product's default dark chrome */
+.dark-surface {
+  background: var(--color-grey-1000);
+  color: #ffffff;
+  padding: 24px;
+  margin: -24px;
+  min-height: 100%;
+}
+
+/* Small text utilities used across cards */
+.eyebrow {
+  font-family: var(--fontFamily-headings);
+  font-weight: 600;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-grey-500);
+}
+.mono {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--color-grey-600);
+}
+.label {
+  font-family: var(--fontFamily-headings);
+  font-weight: 600;
+  font-size: 13px;
+  color: var(--color-grey-1000);
+  letter-spacing: -0.14px;
+}
+.sub {
+  font-family: var(--fontFamily-body);
+  font-size: 12px;
+  color: var(--color-grey-500);
+  line-height: 16px;
+}
+.hx {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--color-grey-400);
+  text-transform: lowercase;
+}
+
+/* Layout helpers */
+.row { display: flex; gap: 8px; align-items: stretch; }
+.col { display: flex; flex-direction: column; gap: 8px; }
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+.grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+.grid-5 { display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; }
