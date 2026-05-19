@@ -8,7 +8,14 @@
   "files": {
     "ignoreUnknown": true,
     "include": ["**/*.json", "**/*.jsonc"],
-    "ignore": ["node_modules", "**/references/**", ".claude/**", ".agents/**", "package-lock.json"]
+    "ignore": [
+      "node_modules",
+      "**/references/**",
+      ".context/**",
+      ".claude/**",
+      ".agents/**",
+      "package-lock.json"
+    ]
   },
   "formatter": {
     "enabled": true,

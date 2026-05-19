@@ -5,6 +5,7 @@
   "globs": ["**/*.md"],
   "ignores": [
     "node_modules",
+    ".context",
     ".claude",
     ".agents",
     "plugins/**/references/**",

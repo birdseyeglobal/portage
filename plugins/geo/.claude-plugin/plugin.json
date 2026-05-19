@@ -1,0 +1,18 @@
+{
+  "name": "geo",
+  "version": "0.1.0",
+  "description": "Generative engine optimization workflows for AI-search prompt design, citation analysis, content briefs, sitemap strategy, SEO competitor research, and visibility reporting",
+  "author": {
+    "name": "Christopher Rock"
+  },
+  "license": "MIT",
+  "keywords": ["geo", "ai-search", "llm-visibility", "citations", "seo", "content-strategy"],
+  "skills": [
+    "./skills/prompt-generation",
+    "./skills/content-briefs",
+    "./skills/seo-competitor-research",
+    "./skills/sitemap-strategy",
+    "./skills/reddit-citation-analysis",
+    "./skills/visibility-progress-report"
+  ]
+}
