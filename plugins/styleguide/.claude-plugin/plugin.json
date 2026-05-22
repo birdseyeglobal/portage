@@ -16,7 +16,15 @@
     "documentation",
     "stakeholder-updates",
     "pull-requests",
-    "issues"
+    "issues",
+    "task-management"
   ],
-  "skills": ["./skills/styleguide", "./skills/visual-styleguide"]
+  "skills": [
+    "./skills/content-styleguide",
+    "./skills/visual-styleguide",
+    "./skills/pull-request",
+    "./skills/issue-writing",
+    "./skills/task-management",
+    "./skills/stakeholder-update"
+  ]
 }
