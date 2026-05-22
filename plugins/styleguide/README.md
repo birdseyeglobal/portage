@@ -134,6 +134,10 @@ generic visual defaults wherever it has a rule.
   triggers, shape, examples, and anti-patterns.
 - `issue-writing/references/issue-shape.md` — issue titles, scope,
   decomposition, acceptance checks, and template boundaries.
+- `task-management/references/linear-method.md` — the full Linear Method
+  (linear.app/method) as a task style guide: issue writing, titles,
+  descriptions, enabler/blocker/maintenance triage, scope, momentum,
+  direction, cycles, and design tasks.
 - `task-management/references/task-shape.md` — task titles, status, blockers,
   dependencies, acceptance checks, decomposition, and handoffs.
 - `stakeholder-update/references/update-shape.md` — compression, provenance,
