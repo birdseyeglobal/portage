@@ -1,12 +1,7 @@
-# Issues
+# Issue Shape
 
 An issue frames one unit of work clearly enough that a competent engineer can
 start. It is not a ritual template, a user story, or a design document.
-
-The standard is practical: could the assignee start without another planning
-meeting? If yes, the issue is probably detailed enough. If no, add the missing
-constraint, example, acceptance check, or link to the document that owns the
-deeper context.
 
 ## Title
 
@@ -77,21 +72,6 @@ Fix persistence.
 - [ ] Persistence is fixed.
 </weak-issue-template>
 
-## Markdown and Visual Hierarchy
-
-Use Markdown to make the issue scannable, not decorative.
-
-- Keep paragraphs short: one to three sentences.
-- Use headings only when they reduce scanning cost.
-- Use bullets for peer constraints, acceptance checks, examples, or links.
-- Use numbered lists only for ordered reproduction steps or execution sequence.
-- Use code spans for symbols, commands, file paths, API names, and literal
-  values.
-- Put the most important context before supporting detail.
-
-Avoid dense walls of text, nested bullets, and headings that exist only because a
-template had them.
-
 ## What Belongs in the Issue
 
 Use the issue body for the actionable frame:
@@ -100,7 +80,8 @@ Use the issue body for the actionable frame:
 - The outcome the work should produce.
 - Constraints, acceptance criteria, or non-goals.
 - Evidence that changes the work.
-- Links to discussion, code, pull requests, or documents that own deeper context.
+- Links to discussion, code, pull requests, or documents that own deeper
+  context.
 
 Keep evidence compact. A one-sentence summary plus a link is usually better than
 pasting a long transcript, traceback, or design thread.
@@ -123,11 +104,6 @@ Use this split:
 - **Research doc**: evidence, source quality, methodology, confidence.
 - **Pull request**: what actually changed and how it was verified.
 
-Supporting work documents include design briefs, investigation notes, data
-appendices, implementation plans, meeting notes, decision notes, and
-product/work-tracking documents. They may live outside the repo when the context
-belongs to a planning surface rather than the codebase.
-
 If the issue needs more than a few paragraphs of background, the background
 probably belongs in a document. Summarize the relevant point in one or two
 sentences and link the document as provenance.
@@ -149,10 +125,8 @@ Oversized signals:
 
 When an issue is too large, decompose along natural boundaries:
 
-- **Service or package boundaries**: harness core, SQL adapter, Pydantic AI
-  adapter, TUI, docs.
-- **Concern boundaries**: data model, runtime behaviour, public API, tests,
-  docs.
+- **Service or package boundaries**: core service, adapter, UI, docs.
+- **Concern boundaries**: data model, runtime behavior, public API, tests, docs.
 - **Dependency boundaries**: prerequisite contract first, consumers second.
 - **Value boundaries**: each issue should leave the project better if it lands
   alone.
@@ -183,8 +157,8 @@ too broad or the criteria are implementation steps.
 
 ## Public Intake Versus Internal Issues
 
-Public GitHub issue templates collect structured information from people
-who may not know the codebase. Respect those templates for bug reports, feature
+Public GitHub issue templates collect structured information from people who may
+not know the codebase. Respect those templates for bug reports, feature
 requests, and documentation reports.
 
 Internal issues can be shorter because the reader shares more context. Do not

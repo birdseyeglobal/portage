@@ -6,15 +6,15 @@ description: |
   presentation support pages, visual docs, landing pages, and other rendered
   prose surfaces where layout, type, color, and link styling affect the result.
   Load `references/yolando-design-system.md` for Yolando-branded surfaces.
-  Pair with the `styleguide` skill when the work also needs voice, structure,
+  Pair with `content-styleguide` when the work also needs voice, structure,
   tone, or AI-writing artifact cleanup.
 ---
 
 # Visual Style Guide
 
 Use this skill for rendered or designed communication surfaces. Most markdown,
-issues, pull requests, comments, and plain messages should use `styleguide`
-instead.
+issues, pull requests, comments, and plain messages should use
+`content-styleguide` or the matching surface skill instead.
 
 ## Brand Systems
 
@@ -58,11 +58,11 @@ Principles:
 - Use as few colors as possible.
 - Let the content, hierarchy, and spacing carry the page.
 
-## Relationship To `styleguide`
+## Relationship To `content-styleguide`
 
-`styleguide` governs what the communication says and how it is structured.
-`visual-styleguide` governs how designed communication surfaces are laid out and
-rendered.
+`content-styleguide` governs what the communication says and how it is
+structured. `visual-styleguide` governs how designed communication surfaces are
+laid out and rendered.
 
 Load both when the artifact needs both prose judgment and visual presentation,
 such as an executive briefing page, customer-facing PDF, visual strategy memo,

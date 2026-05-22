@@ -5,8 +5,8 @@ documentation, source archives, or project journals. Their job is to make
 status, risk, decisions, and asks clear enough for the next conversation or
 decision.
 
-The format can be a Slack note, email, memo, issue comment, meeting brief,
-PDF, or deck. The invariant is compression.
+The format can be a Slack note, email, memo, issue comment, meeting brief, PDF,
+or deck. The invariant is compression.
 
 Lead with:
 
@@ -27,10 +27,10 @@ Choose the organizing axis the reader needs:
 - dependency or sequencing issue;
 - tradeoff between options.
 
-Avoid organizing by internal source shape unless that is the thing the reader
-is reviewing. A pull request list, research dump, metric table, or roadmap
-inventory is source material. Convert it into the status, decision, risk, or
-ask it supports.
+Avoid organizing by internal source shape unless that is the thing the reader is
+reviewing. A pull request list, research dump, metric table, or roadmap
+inventory is source material. Convert it into the status, decision, risk, or ask
+it supports.
 
 ## Provenance
 
