@@ -12,7 +12,8 @@
     "lint:skills": "bun scripts/validate-skill-frontmatter.ts",
     "lint": "bun run lint:json && bun run lint:md && bun run lint:skills",
     "validate": "bun run format:check && bun run lint",
-    "link-skills": "./scripts/link-marketplace-skills.sh"
+    "link-skills": "./scripts/link-marketplace-skills.sh",
+    "sync-codex": "bun scripts/sync-codex-plugin.ts"
   },
   "devDependencies": {
     "@biomejs/biome": "^1.9.4",
