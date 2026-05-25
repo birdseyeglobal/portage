@@ -1,0 +1,34 @@
+{
+  "name": "portage",
+  "version": "0.1.0",
+  "description": "Portable content, styleguide, and generative engine optimization skills for Codex.",
+  "author": {
+    "name": "Christopher Rock",
+    "url": "https://github.com/grootenberg"
+  },
+  "homepage": "https://github.com/grootenberg/portage",
+  "repository": "https://github.com/grootenberg/portage",
+  "license": "MIT",
+  "keywords": ["writing", "styleguide", "content-strategy", "seo", "geo", "ai-search", "citations"],
+  "skills": "./.agents/skills/",
+  "commands": "./commands/",
+  "agents": "./agents/",
+  "interface": {
+    "displayName": "Portage",
+    "shortDescription": "Portable writing, styleguide, SEO, and GEO skills",
+    "longDescription": "Portage exposes reusable assistant skills for prose craft, editorial review, styleguide-aligned communication, SEO workflows, and generative engine optimization.",
+    "developerName": "Christopher Rock",
+    "category": "Productivity",
+    "capabilities": ["Write"],
+    "websiteURL": "https://github.com/grootenberg/portage",
+    "privacyPolicyURL": "https://github.com/grootenberg/portage",
+    "termsOfServiceURL": "https://github.com/grootenberg/portage",
+    "defaultPrompt": [
+      "Improve this draft using Portage prose and styleguide skills",
+      "Create a GEO content brief",
+      "Review this pull request description against the styleguide"
+    ],
+    "brandColor": "#2563EB",
+    "screenshots": []
+  }
+}

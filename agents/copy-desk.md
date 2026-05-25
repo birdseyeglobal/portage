@@ -1,0 +1,1 @@
+../plugins/prose/agents/copy-desk.md
